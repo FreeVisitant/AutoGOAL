@@ -215,8 +215,6 @@ class RestrictedWorkerByJoin(RestrictedWorker):
 
         from torch.cuda import is_initialized
 
-        print("CUDA Initialized:", is_initialized())
-
         rprocess.start()
         # stats = monitor_resources(rprocess)
         rprocess.join(self.timeout)

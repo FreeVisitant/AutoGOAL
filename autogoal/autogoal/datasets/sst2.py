@@ -3,7 +3,7 @@ import csv
 
 from autogoal.datasets import download, datapath
 
-def load():
+def load(*args, **kwargs):
     try:
         download("sst2")
     except Exception as e:
