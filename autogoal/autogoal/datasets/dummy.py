@@ -5,7 +5,7 @@ This module generates a random dataset useful for quickly testing the interface 
 import numpy as np
 
 
-def generate(samples=100, classes=2, features=10, exponent=1, error=0.1, seed=None):
+def generate(*args, samples=100, classes=2, features=10, exponent=1, error=0.1, seed=None, **kwargs):
     """
     Create a random X,y pair.
 

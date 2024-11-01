@@ -134,14 +134,13 @@ class SearchAlgorithm:
 
                 for _ in range(self._pop_size):
                     solution_keepsake = None
-                    solution_keepsake = None
 
                     try:
                         solution = self._generate()
 
                         # replay the sampler in order to get a keepsake solution.
                         # only the original solution will be used to calculate the fitness
-                        # and then it will be destroyed
+                        # and then it will be destroyed. This is to avoid memory leaks.
                         solution.sampler_.replay()
                         solution_keepsake = self._generator_fn(solution.sampler_)
                     except Exception as e:
@@ -150,8 +149,10 @@ class SearchAlgorithm:
                         )
                         continue
 
-                    if not self._allow_duplicates and repr(solution_keepsake) in seen:
-                        continue
+                    if not self._allow_duplicates:
+                        if repr(solution_keepsake) in seen:
+                            continue
+                        seen.add(repr(solution_keepsake))
 
                     try:
                         logger.sample_solution(solution_keepsake)
@@ -164,9 +165,6 @@ class SearchAlgorithm:
                         if self._errors == "raise":
                             logger.end(best_solutions, best_fns)
                             raise e from None
-
-                    if not self._allow_duplicates:
-                        seen.add(repr(solution_keepsake))
 
                     logger.eval_solution(solution_keepsake, fn, observations)
                     solutions.append(solution_keepsake)
@@ -202,6 +200,7 @@ class SearchAlgorithm:
 
                     spent_time = time.time() - start_time
 
+                    print(f"spent_time: {spent_time} sec vs search_timeout: {self._search_timeout} sec")
                     if self._search_timeout and spent_time > self._search_timeout:
                         autogoal.logging.logger().info(
                             "(!) Stopping since time spent is %.2f." % (spent_time)

@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 
-def load(training_batches=5):
+def load(*args, training_batches=5, **kwargs):
     """
     Load the CIFAR-10 dataset
 

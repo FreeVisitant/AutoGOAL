@@ -3,7 +3,7 @@ import csv
 
 from autogoal.datasets import download, datapath
 
-def load(onehot = False):
+def load(*args, **kwargs):
     try:
         download("rotten_tomatoes")
     except:

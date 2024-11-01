@@ -5,7 +5,7 @@ import numpy as np
 from autogoal.datasets import datapath, download
 
 
-def load_raw(max_examples=None):
+def load_raw(*args, max_examples=None, **kwargs):
     """
     Loads the train and test datasets for the [HAHA 2019 corpus](https://www.fing.edu.uy/inco/grupos/pln/haha/index.html#data)
     as Pandas dataframes.

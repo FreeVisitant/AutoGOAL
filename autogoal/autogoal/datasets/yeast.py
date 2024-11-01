@@ -4,7 +4,7 @@ from autogoal.datasets import datapath, download
 from sklearn.feature_extraction import DictVectorizer
 
 
-def load():
+def load(*args, **kwargs):
     """
     Loads corpora from [Yeast uci dataset](https://archive.ics.uci.edu/ml/datasets/Yeast).
 

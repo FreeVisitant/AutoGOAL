@@ -6,7 +6,7 @@ from scipy import sparse as sp
 from autogoal.datasets import datapath, download
 
 
-def load():
+def load(*args, **kwargs):
     """
     Loads train and valid datasets from [DOROTHEA uci dataset](https://archive.ics.uci.edu/ml/datasets/dorothea).
 

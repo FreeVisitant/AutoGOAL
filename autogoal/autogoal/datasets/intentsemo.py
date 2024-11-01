@@ -12,10 +12,12 @@ class TaskType(enum.Enum):
     TextClassification="TextClassification"
     
 def load(
+    *args, 
     mode=TaskType.SentenceClassification,
     include_sentiment=True,
     include_emotions=True,
-    verbose=False):
+    verbose=False,
+    **kwargs):
     """
     Loads full dataset from [IntentSEMO].
     """

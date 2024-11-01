@@ -5,7 +5,6 @@ from typing import Tuple, List, Optional, Callable
 import re
 
 from autogoal.datasets import download, datapath
-from sklearn.preprocessing import LabelEncoder
 
 class TaskType(enum.Enum):
     TokenClassification = "TokenClassification"
@@ -114,6 +113,12 @@ def load_text_classification_dataset(encoding: Optional[str] = None) -> Tuple[Li
     # Encode labels if encoding is specified
     if encoding:
         if encoding.lower() == 'ordinal':
+            try:
+                from sklearn.preprocessing import LabelEncoder
+            except ImportError as e:
+                print("Please install scikit-learn to use ordinal encoding.")
+                raise e
+            
             label_encoder = LabelEncoder()
             all_labels = y_train + y_test
             label_encoder.fit(all_labels)

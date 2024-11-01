@@ -12,7 +12,7 @@ def _parse(x):
     return int(x) if x.isdigit() else x
 
 
-def load(max_examples=None):
+def load(*args, max_examples=None, **kwargs):
     download("german_credit")
 
     f = open(datapath("german_credit") / "german.data", "r")

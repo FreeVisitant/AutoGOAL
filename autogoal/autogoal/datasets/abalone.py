@@ -4,7 +4,7 @@ from sklearn.feature_extraction import DictVectorizer
 from autogoal.datasets import datapath, download
 
 
-def load(representation="numeric"):
+def load(*args, representation="numeric", **kwargs):
     """
     Loads corpora from [ABALONE uci dataset](https://archive.ics.uci.edu/ml/datasets/Abalone).
 

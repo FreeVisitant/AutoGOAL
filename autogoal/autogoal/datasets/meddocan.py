@@ -3,7 +3,7 @@ import os
 from autogoal.datasets import datapath, download
 
 
-def load(max_examples=None):
+def load(*args, max_examples=None, **kwargs):
     """
     Loads train and test datasets from [MEDDOCAN iberleaf 2018](https://github.com/PlanTL-SANIDAD/SPACCC_MEDDOCAN).
 

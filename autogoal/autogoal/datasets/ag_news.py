@@ -3,7 +3,7 @@ import csv
 
 from autogoal.datasets import download, datapath
 
-def load(label_encoding = True, *args, **kwargs):
+def load(*args, label_encoding = True, **kwargs):
     try:
         download("ag_news")
     except Exception as e:
