@@ -16,7 +16,7 @@ def load(
         )
         raise e
 
-    path = datapath("sst2/sst2")
+    path = datapath("meld/meld")
 
     X_train = []
     y_train = []
