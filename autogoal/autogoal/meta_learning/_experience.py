@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import uuid
 from pathlib import Path
 import numpy as np
@@ -115,8 +116,8 @@ class ExperienceStore:
     def load_all_experiences(
         from_date: Optional[Union[str, date]] = None,
         to_date: Optional[Union[str, date]] = None,
-        include_aliases: Optional[List[str]] = None,
-        exclude_aliases: Optional[List[str]] = None,
+        include: Optional[str] = None,
+        exclude: Optional[str] = None,
     ) -> List[Experience]:
         """
         Loads all experiences from disk, traversing all alias and date folders, with optional filtering.
@@ -124,8 +125,8 @@ class ExperienceStore:
         Args:
             from_date (Optional[Union[str, date]]): The start date in "YYYY-MM-DD" format or a date object.
             to_date (Optional[Union[str, date]]): The end date in "YYYY-MM-DD" format or a date object.
-            include_aliases (Optional[List[str]]): List of aliases to include.
-            exclude_aliases (Optional[List[str]]): List of aliases to exclude.
+            include (Optional[str]): Regex of aliases to include.
+            exclude (Optional[str]): Regex of aliases to exclude.
 
         Returns:
             A list of Experience instances.
@@ -149,15 +150,24 @@ class ExperienceStore:
             to_date_obj = to_date
         else:
             to_date_obj = None
+            
+        if include:
+            include = f".*({include}).*"
+        else:
+            include = r".*"
+
+        if exclude:
+            exclude = f".*({exclude}).*"
 
         # Traverse all alias directories
         for alias_dir in ExperienceStore.DATA_PATH.iterdir():
             if alias_dir.is_dir():
                 alias = alias_dir.name
                 # Apply alias filtering
-                if include_aliases and alias not in include_aliases:
+                if not re.match(include, alias):
                     continue
-                if exclude_aliases and alias in exclude_aliases:
+                
+                if exclude is not None and re.match(exclude, alias):
                     continue
 
                 # Traverse all date directories within the alias directory

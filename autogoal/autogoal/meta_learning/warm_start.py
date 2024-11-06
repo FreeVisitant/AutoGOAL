@@ -1,11 +1,12 @@
 from datetime import date
+import pprint
 from typing import Dict, List, Optional, Union
 from autogoal.meta_learning._experience import Experience, ExperienceStore
 from autogoal.meta_learning.feature_extraction.text_classification import (
     TextClassificationFeatureExtractor,
 )
 from autogoal.meta_learning.normalization import Normalizer
-from autogoal.meta_learning.distance import DistanceMetric, EuclideanDistance
+from autogoal.meta_learning.distance import DistanceMetric, EuclideanDistance, MahalanobisDistance
 from autogoal.meta_learning.feature_extraction.system_feature_extractor import (
     SystemFeatureExtractor,
 )
@@ -15,6 +16,7 @@ from autogoal.sampling import (
     DistributionParam,
     MeanDevParam,
     ModelSampler,
+    UnormalizedWeightParam,
     WeightParam,
     update_model,
 )
@@ -79,7 +81,9 @@ class WarmStart:
         ] = TextClassificationFeatureExtractor,
         system_feature_extractor: Optional[FeatureExtractor] = SystemFeatureExtractor,
         from_date: Optional[Union[str, date]] = None, 
-        to_date: Optional[Union[str, date]] = None
+        to_date: Optional[Union[str, date]] = None,
+        include: Optional[str] = None,
+        exclude: Optional[str] = None,
     ):
         self._model: Dict = {}
         self.generator_fn = None
@@ -94,6 +98,8 @@ class WarmStart:
         self.system_feature_extractor_class = system_feature_extractor
         self.from_date = from_date
         self.to_date = to_date
+        self.include = include
+        self.exclude = exclude
 
     def pre_warm_up(self, X_train, y_train):
         """
@@ -136,7 +142,7 @@ class WarmStart:
         self.generator_fn = generator_fn
 
         # Step 2: Load experiences
-        experiences = ExperienceStore.load_all_experiences(self.from_date, self.to_date)
+        experiences = ExperienceStore.load_all_experiences(self.from_date, self.to_date, include=self.include, exclude=self.exclude)
 
         # Step 2.1: Filter experiences based on feature extractors
         experiences = self.filter_experiences_by_feature_extractors(experiences)
@@ -168,9 +174,15 @@ class WarmStart:
             selected_negative_experiences,
             negative_distances,
         )
+        
+        print(f"Learning from {len(selected_positive_experiences)} positive experiences and {len(selected_negative_experiences)} negative experiences.")
 
         # Step 5: Adjust the internal probabilistic model
         self.adjust_model(alpha_experiences)
+        
+        print("Model adjusted to:")
+        pprint.pprint(self._model)
+        
         return self._model
 
     def _normalize_features(
@@ -243,36 +255,101 @@ class WarmStart:
         Returns:
             List[float]: Distances corresponding to each experience.
         """
-        # Collect all features for normalization
-        all_dataset_features = [exp.dataset_features for exp in experiences]
-        all_dataset_features.append(current_dataset_features)
-        all_system_features = [exp.system_features for exp in experiences]
-        all_system_features.append(current_system_features)
+        # Step 1: Combine dataset and system features for each experience
+        combined_features = []
+        for exp in experiences:
+            combined = np.concatenate((exp.dataset_features, exp.system_features))
+            combined_features.append(combined)
+            
+        # Step 2: Combine current dataset and system features
+        current_combined = np.concatenate((current_dataset_features, current_system_features))
+        combined_features.append(current_combined)  # This is the last element
+        
+        # Step 3: Normalize all combined features together
+        normalized_combined_features = self._normalize_features(combined_features)
 
-        # Normalize features
-        normalized_dataset_features = self._normalize_features(all_dataset_features)
-        normalized_system_features = self._normalize_features(all_system_features)
-
-        # Update experiences with normalized features
+        # Step 4: Update experiences with normalized features
         for i, exp in enumerate(experiences):
-            exp.dataset_features = normalized_dataset_features[i]
-            exp.system_features = normalized_system_features[i]
+            combined = normalized_combined_features[i]
+            
+            # Assuming you want to keep dataset and system features separate
+            dataset_length = len(exp.dataset_features)
+            exp.dataset_features = combined[:dataset_length]
+            exp.system_features = combined[dataset_length:]
+            
+        # Step 5: Get normalized current combined features
+        normalized_current_combined = normalized_combined_features[-1]
+        current_features = normalized_current_combined
 
-        # Get normalized current features
-        current_dataset_features = normalized_dataset_features[-1]
-        current_system_features = normalized_system_features[-1]
+        # Step 6: Prepare the distance metric (e.g., compute and set VI for Mahalanobis)
+        self._prepare_distance_metric(normalized_combined_features)
 
+        # Step 7: Compute distances
         distances = []
         for exp in experiences:
             exp_features = np.concatenate((exp.dataset_features, exp.system_features))
-            current_features = np.concatenate(
-                (current_dataset_features, current_system_features)
-            )
-
             distance = self.distance.compute(current_features, exp_features)
-
             distances.append(distance)
+        
         return distances
+        
+        # # Collect all features for normalization
+        # all_dataset_features = [exp.dataset_features for exp in experiences]
+        # all_dataset_features.append(current_dataset_features)
+        # all_system_features = [exp.system_features for exp in experiences]
+        # all_system_features.append(current_system_features)
+
+        # # Normalize features
+        # normalized_dataset_features = self._normalize_features(all_dataset_features)
+        # normalized_system_features = self._normalize_features(all_system_features)
+
+        # # Update experiences with normalized features
+        # for i, exp in enumerate(experiences):
+        #     exp.dataset_features = normalized_dataset_features[i]
+        #     exp.system_features = normalized_system_features[i]
+
+        # # Get normalized current features
+        # current_dataset_features = normalized_dataset_features[-1]
+        # current_system_features = normalized_system_features[-1]
+
+        # # Prepare the distance metric if necessary
+        # self._prepare_distance_metric(normalized_dataset_features + normalized_system_features)
+
+        # distances = []
+        # for exp in experiences:
+        #     exp_features = np.concatenate((exp.dataset_features, exp.system_features))
+        #     current_features = np.concatenate(
+        #         (current_dataset_features, current_system_features)
+        #     )
+
+        #     distance = self.distance.compute(current_features, exp_features)
+
+        #     distances.append(distance)
+        # return distances
+    
+    def _prepare_distance_metric(self, combined_features: np.ndarray):
+        """
+        Prepares the distance metric by computing and setting necessary parameters,
+        such as the inverse covariance matrix for MahalanobisDistance.
+
+        Parameters:
+            combined_features (np.ndarray): Combined normalized features from datasets and systems.
+
+        Returns:
+            None
+        """
+        if isinstance(self.distance, MahalanobisDistance):
+            covariance = np.cov(combined_features, rowvar=False)
+            try:
+                VI = np.linalg.inv(covariance)
+                print("Computed VI first try")
+            except np.linalg.LinAlgError:
+                # Regularize covariance matrix to make it invertible
+                regularization_term = 1e-6 * np.eye(covariance.shape[0])
+                VI = np.linalg.inv(covariance + regularization_term)
+                print("Computed VI after regularization")
+                
+            self.distance.set_VI(VI)
 
     def select_experiences(self, experiences: List[Experience], distances):
         # Pair each experience with its distance
@@ -472,3 +549,8 @@ class WarmStart:
 
             # update the warmstart model with the experience model
             self._model = update_model(self._model, sampler.updates, alpha)
+            
+            for item, value in self._model.items():
+                if isinstance(value, UnormalizedWeightParam) and value.value == 0:
+                    # Clip the value to a minimum of 0.001
+                    self._model[item] = UnormalizedWeightParam(value=0.001)

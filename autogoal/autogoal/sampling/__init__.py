@@ -403,7 +403,6 @@ class ModelParam(metaclass=abc.ABCMeta):
     def update(self, alpha: float, updates) -> "ModelParam":
         pass
 
-
 @nice_repr
 class UnormalizedWeightParam(ModelParam):
     def __init__(self, value):
@@ -427,7 +426,6 @@ class UnormalizedWeightParam(ModelParam):
             result += s * w
 
         return UnormalizedWeightParam(1 + result)
-
 
 @nice_repr
 class DistributionParam(ModelParam):
@@ -473,7 +471,6 @@ class DistributionParam(ModelParam):
             weights[s] += w
 
         return DistributionParam(weights)
-
 
 @nice_repr
 class MeanDevParam(ModelParam):
@@ -525,7 +522,6 @@ class MeanDevParam(ModelParam):
         return MeanDevParam(
             average, math.sqrt(variance), initial_params=self.initial_params
         )
-
 
 @nice_repr
 class WeightParam(ModelParam):
