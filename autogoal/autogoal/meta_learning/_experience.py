@@ -169,7 +169,9 @@ class ExperienceStore:
                 
                 if exclude is not None and re.match(exclude, alias):
                     continue
-
+                
+                print("loading experiences for alias:", alias)    
+                
                 # Traverse all date directories within the alias directory
                 for date_dir in alias_dir.iterdir():
                     if date_dir.is_dir():

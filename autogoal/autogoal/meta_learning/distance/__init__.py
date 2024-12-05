@@ -174,3 +174,4 @@ class MahalanobisDistance(DistanceMetric):
         distances = pdist(feature_vectors, metric="mahalanobis", VI=self.VI)
         distance_matrix = squareform(distances)
         return distance_matrix
+ 

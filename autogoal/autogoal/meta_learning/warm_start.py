@@ -1,4 +1,5 @@
 from datetime import date
+import math
 import pprint
 from typing import Dict, List, Optional, Union
 from autogoal.meta_learning._experience import Experience, ExperienceStore
@@ -74,6 +75,12 @@ class WarmStart:
         k_neg=20,
         max_alpha=0.05,
         min_alpha=-0.02,
+        adaptative_positive_alpha_limit=None,
+        adaptative_negative_alpha_limit=None,
+        beta_scale=1.0,
+        beta=None,
+        f1_weight=0.5,
+        evaluation_time_weight=0.5,
         normalizers: Optional[List[Normalizer]] = None,
         distance: DistanceMetric = EuclideanDistance,
         dataset_feature_extractor: Optional[
@@ -84,14 +91,35 @@ class WarmStart:
         to_date: Optional[Union[str, date]] = None,
         include: Optional[str] = None,
         exclude: Optional[str] = None,
+        exit_after_warmup: bool = False,
     ):
         self._model: Dict = {}
         self.generator_fn = None
         self.positive_min_threshold = positive_min_threshold
         self.k_pos = k_pos
         self.k_neg = k_neg
+        
         self.max_alpha = max_alpha
         self.min_alpha = min_alpha
+        
+        self.adaptative_negative_alpha_limit = adaptative_negative_alpha_limit
+        if (self.adaptative_negative_alpha_limit is not None and self.adaptative_negative_alpha_limit > 0):
+            raise ValueError("adaptative_negative_alpha_limit must be a non-positive value.")
+        
+        
+        self.adaptative_positive_alpha_limit = adaptative_positive_alpha_limit
+        if (self.adaptative_positive_alpha_limit is not None and self.adaptative_positive_alpha_limit < 0):
+            raise ValueError("adaptative_negative_alpha_limit must be a non-negative value.")
+        
+        self.beta = beta
+        self.beta_scale = beta_scale
+        
+        total_weight = f1_weight + evaluation_time_weight
+        self.f1_weight = f1_weight / total_weight # ratio of f1 weight
+        self.evaluation_time_weight = evaluation_time_weight / total_weight # ratio of evaluation time weight
+        
+        print(f"F1 Weight: {self.f1_weight}, Evaluation Time Weight: {self.evaluation_time_weight}")
+        
         self.normalizers = normalizers or []
         self.distance = distance() if distance else EuclideanDistance()
         self.dataset_feature_extractor_class = dataset_feature_extractor
@@ -100,7 +128,8 @@ class WarmStart:
         self.to_date = to_date
         self.include = include
         self.exclude = exclude
-
+        self.exit_after_warmup = exit_after_warmup
+        
     def pre_warm_up(self, X_train, y_train):
         """
         Stores the training data for later use during warm-up.
@@ -181,7 +210,18 @@ class WarmStart:
         self.adjust_model(alpha_experiences)
         
         print("Model adjusted to:")
-        pprint.pprint(self._model)
+        # pprint.pprint(self._model)
+        
+        print("Learned experience for Finetuning Methods:")
+        print(f'"FineTuneGenLLMClassifier": {self._model["FineTuneGenLLMClassifier"].value},')
+        print(f'"LoraGenLLMClassifier": {self._model["LoraGenLLMClassifier"].value},')
+        print(f'"PartialFineTuneGenLLMClassifier": {self._model["PartialFineTuneGenLLMClassifier"].value},')
+        print(f'"FineTuneLLMEmbeddingClassifier": {self._model["FineTuneLLMEmbeddingClassifier"].value},')
+        print(f'"LoraLLMEmbeddingClassifier": {self._model["LoraLLMEmbeddingClassifier"].value},')
+        print(f'"PartialFineTuneLLMEmbeddingClassifier": {self._model["PartialFineTuneLLMEmbeddingClassifier"].value}')
+        
+        if self.exit_after_warmup:
+            raise ValueError("Exiting after warm-up.")
         
         return self._model
 
@@ -292,40 +332,6 @@ class WarmStart:
             distances.append(distance)
         
         return distances
-        
-        # # Collect all features for normalization
-        # all_dataset_features = [exp.dataset_features for exp in experiences]
-        # all_dataset_features.append(current_dataset_features)
-        # all_system_features = [exp.system_features for exp in experiences]
-        # all_system_features.append(current_system_features)
-
-        # # Normalize features
-        # normalized_dataset_features = self._normalize_features(all_dataset_features)
-        # normalized_system_features = self._normalize_features(all_system_features)
-
-        # # Update experiences with normalized features
-        # for i, exp in enumerate(experiences):
-        #     exp.dataset_features = normalized_dataset_features[i]
-        #     exp.system_features = normalized_system_features[i]
-
-        # # Get normalized current features
-        # current_dataset_features = normalized_dataset_features[-1]
-        # current_system_features = normalized_system_features[-1]
-
-        # # Prepare the distance metric if necessary
-        # self._prepare_distance_metric(normalized_dataset_features + normalized_system_features)
-
-        # distances = []
-        # for exp in experiences:
-        #     exp_features = np.concatenate((exp.dataset_features, exp.system_features))
-        #     current_features = np.concatenate(
-        #         (current_dataset_features, current_system_features)
-        #     )
-
-        #     distance = self.distance.compute(current_features, exp_features)
-
-        #     distances.append(distance)
-        # return distances
     
     def _prepare_distance_metric(self, combined_features: np.ndarray):
         """
@@ -429,73 +435,120 @@ class WarmStart:
         selected_negative_experiences: List[Experience],
         negative_distances,
     ):
+        """
+        Computes learning rates (alphas) for adjusting the model.
+
+        This method groups experiences by alias, computes group-level alphas,
+        and then assigns alphas to individual experiences.
+
+        Returns:
+            Dict[Experience, float]: A dictionary mapping experiences to their alphas.
+        """
         experience_alphas = {}
+        
+        # Use adaptative negative alpha limit if set
+        if (self.adaptative_negative_alpha_limit is not None and len(selected_negative_experiences) > 0):
+            self.min_alpha = self.adaptative_negative_alpha_limit / len(selected_negative_experiences)
+            print(f"Using adaptative negative alpha limit ({self.adaptative_negative_alpha_limit}). Computed min_alpha: {self.min_alpha}")
+            
+        # Use adaptative positive alpha limit if set
+        if (self.adaptative_positive_alpha_limit is not None and len(selected_positive_experiences) > 0):
+            self.max_alpha = self.adaptative_positive_alpha_limit / len(selected_positive_experiences)
+            print(f"Using adaptative positive alpha limit ({self.adaptative_positive_alpha_limit}). Computed min_alpha: {self.max_alpha}")
 
-        # Handle positive experiences
-        if selected_positive_experiences:
-            f1_scores = [exp.f1 for exp in selected_positive_experiences]
-            eval_times = [exp.evaluation_time for exp in selected_positive_experiences]
+        # Combine positive and negative experiences
+        all_experiences = selected_positive_experiences + selected_negative_experiences
+        all_distances = positive_distances + negative_distances
+        
+        beta = self.beta if self.beta is not None else self.compute_distance_decay_beta(all_distances)
+        
+        # Map experiences to their distances
+        experience_distance_map = dict(zip(all_experiences, all_distances))
 
-            # Normalize F1 scores
-            max_f1 = max(f1_scores) or 1.0  # Prevent division by zero
-            normalized_f1 = [f1 / max_f1 for f1 in f1_scores]
+        # Group experiences by alias
+        experience_groups = {}
+        for exp, dist in zip(selected_positive_experiences, positive_distances):
+            alias = exp.alias or "Unknown"
+            if alias not in experience_groups:
+                experience_groups[alias] = {"experiences": [], "distances": []}
+            experience_groups[alias]["experiences"].append(exp)
+            experience_groups[alias]["distances"].append(dist)
 
-            # Normalize evaluation times (lower is better)
-            min_time = min(eval_times)
-            max_time = max(eval_times)
-            time_range = max_time - min_time if max_time != min_time else 1.0
-            normalized_time = [(time - min_time) / time_range for time in eval_times]
+        # For positive experiences, normalize F1 and evaluation times within groups
+        for alias, group_experiences in experience_groups.items():
+            group_positive_experiences = group_experiences["experiences"]
 
-            # Invert normalized evaluation times
-            normalized_time_inv = [1 - t for t in normalized_time]
+            # Handle positive experiences
+            if group_positive_experiences:
+                # Get F1 scores and evaluation times
+                f1_scores = [exp.f1 for exp in group_positive_experiences]
+                eval_times = [exp.evaluation_time for exp in group_positive_experiences]
 
-            # Combine normalized F1 and inverted evaluation time into a utility score
-            w1 = 0.5  # Weight for F1 score
-            w2 = 0.5  # Weight for evaluation time
-            utility_scores = [
-                w1 * f1 + w2 * t_inv
-                for f1, t_inv in zip(normalized_f1, normalized_time_inv)
-            ]
+                # Normalize F1 scores within the group
+                max_f1 = max(f1_scores) or 1.0  # Prevent division by zero
+                normalized_f1 = [f1 / max_f1 for f1 in f1_scores]
 
-            # Normalize distances
-            dist_min = min(positive_distances)
-            dist_max = max(positive_distances)
-            dist_range = dist_max - dist_min if dist_max != dist_min else 1.0
-            normalized_distances = [
-                (dist - dist_min) / dist_range for dist in positive_distances
-            ]
+                # Normalize evaluation times within the group (lower is better)
+                min_time = min(eval_times)
+                max_time = max(eval_times)
+                time_range = max_time - min_time if max_time != min_time else 1.0
+                normalized_time = [
+                    (time - min_time) / time_range for time in eval_times
+                ]
+                normalized_time_inv = [1 - t for t in normalized_time]
 
-            # Compute learning rates (alphas) for positive experiences
-            alphas = [
-                self.max_alpha * utility * (1 - dist_norm)
-                for utility, dist_norm in zip(utility_scores, normalized_distances)
-            ]
+                # Compute utility scores per experience
+                utility_scores = [
+                    self.f1_weight * f1 + self.evaluation_time_weight * t_inv
+                    for f1, t_inv in zip(normalized_f1, normalized_time_inv)
+                ]
 
-            # Map positive experiences to their learning rates
-            for exp, alpha in zip(selected_positive_experiences, alphas):
-                experience_alphas[exp] = alpha
+                # Compute alpha per positive experience
+                for exp, utility in zip(group_positive_experiences, utility_scores):
+                    distance = experience_distance_map[exp]
+                    
+                    # Validate parameters
+                    if beta < 0:
+                        raise ValueError(f"Decay rate beta must be non-negative. Received beta={beta}.")
+                    
+                    if distance < 0:
+                        raise ValueError(f"Distance must be non-negative. Received distance={distance}.")
+
+                    # Compute weight using exponential decay
+                    weight = math.exp(-beta * distance)
+                    alpha = self.max_alpha * utility * weight
+                    
+                    # Ensure alpha does not become less than min_alpha
+                    alpha = min(alpha, self.max_alpha)
+                
+                    experience_alphas[exp] = alpha
 
         # Handle negative experiences
         if selected_negative_experiences:
-            # Normalize distances
-            dist_min = min(negative_distances)
-            dist_max = max(negative_distances)
-            dist_range = dist_max - dist_min if dist_max != dist_min else 1.0
-            normalized_distances = [
-                (dist - dist_min) / dist_range for dist in negative_distances
-            ]
-
-            # Compute learning rates (alphas) for negative experiences
-            alphas = [
-                self.min_alpha * (1 - dist_norm) for dist_norm in normalized_distances
-            ]
-
-            # Map negative experiences to their learning rates
-            for exp, alpha in zip(selected_negative_experiences, alphas):
+            # Compute alpha per negative experience
+            for exp in selected_negative_experiences:
+                # Compute weight using exponential decay
+                weight = math.exp(-beta * distance)
+                alpha = self.min_alpha * weight
+                
+                # Ensure alpha does not become less than min_alpha
+                alpha = max(alpha, self.min_alpha)
                 experience_alphas[exp] = alpha
-
+                
         return experience_alphas
-
+    
+    def compute_distance_decay_beta(self, all_distances: List[float]):
+        # Compute statistics of distances
+        mean_distance = np.mean(all_distances)
+        std_distance = np.std(all_distances)
+        
+        print("Initialized beta with mean and std of distances:", mean_distance, std_distance)
+        print("Beta Scale:", self.beta_scale )
+        print("Computed beta:", self.beta_scale / (std_distance + 1e-8))
+        
+        # Compute beta dynamically based on standard deviation
+        return self.beta_scale / (std_distance + 1e-8)
+    
     def handle_error_experiences(self, experiences: List[Experience], alphas):
         """
         Assigns negative learning rates to experiences with errors (missing accuracy).

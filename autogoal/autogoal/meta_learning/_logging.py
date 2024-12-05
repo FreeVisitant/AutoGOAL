@@ -147,9 +147,10 @@ class ExperienceLogger(Logger):
 
     def eval_solution(self, solution, fitness, observations):
         # Log the successful experience
-        f1_score = fitness[0]  # Adjust according to your fitness structure
-        evaluation_time = fitness[1]  # Adjust accordingly
+        f1_score = fitness[0] if hasattr(fitness, '__len__') else fitness # Adjust according to your fitness structure
+        evaluation_time = fitness[1] if hasattr(fitness, '__len__') and len(fitness) > 1 else None  # Adjust accordingly
         accuracy = None
+        
         if observations is not None and "Accuracy" in observations:
             accuracy = observations["Accuracy"]
 
