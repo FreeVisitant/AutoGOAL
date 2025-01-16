@@ -1,0 +1,76 @@
+domain,n_samples,n_features,n_classes,categories,random_state,search_iters,best_score,time_seconds,best_pipeline
+text,3505,3000,6,"['comp.graphics', 'sci.med', 'rec.sport.baseball', 'talk.politics.guns', 'soc.religion.christian', 'misc.forsale']",0,10,0.9552806850618458,343.95,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,3505,3000,6,"['comp.graphics', 'sci.med', 'rec.sport.baseball', 'talk.politics.guns', 'soc.religion.christian', 'misc.forsale']",0,50,0.9552806850618458,336.89,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,3505,3000,6,"['comp.graphics', 'sci.med', 'rec.sport.baseball', 'talk.politics.guns', 'soc.religion.christian', 'misc.forsale']",1,10,0.9600380589914367,366.00,"Pipeline(
+    algorithms=[
+        RadiusNeighborsTransformer(
+            algorithm=""auto"", leaf_size=59, mode=""distance"", p=1, radius=-9.995
+        ),
+        LogisticRegression(
+            C=9.76829809659094, fit_intercept=True, multi_class=""ovr"", penalty=""l2""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,3505,3000,6,"['comp.graphics', 'sci.med', 'rec.sport.baseball', 'talk.politics.guns', 'soc.religion.christian', 'misc.forsale']",1,50,0.7069457659372027,347.81,"Pipeline(
+    algorithms=[
+        LatentDirichletAllocation(),
+        KBinsDiscretizer(encode=""onehot"", n_bins=2, strategy=""quantile""),
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""multinomial"", penalty=""none""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,3505,3000,6,"['comp.graphics', 'sci.med', 'rec.sport.baseball', 'talk.politics.guns', 'soc.religion.christian', 'misc.forsale']",2,10,0.9448144624167459,322.58,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        LinearSVC(
+            C=1.96047200726797,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,3505,3000,6,"['comp.graphics', 'sci.med', 'rec.sport.baseball', 'talk.politics.guns', 'soc.religion.christian', 'misc.forsale']",2,50,0.9448144624167459,322.19,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        LinearSVC(
+            C=1.96047200726797,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

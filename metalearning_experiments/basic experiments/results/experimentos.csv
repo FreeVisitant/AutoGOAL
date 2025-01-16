@@ -1,0 +1,200 @@
+dataset,random_state,search_iterations,score,pipeline,time_seconds
+iris,0,10,1.0,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""auto"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",41.79
+iris,0,50,1.0,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""auto"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",179.70
+iris,1,10,0.9777777777777777,"Pipeline(
+    algorithms=[
+        NMF(alpha_W=0.0, l1_ratio=0.0, shuffle=True),
+        LogisticRegression(
+            C=9.991, fit_intercept=True, multi_class=""ovr"", penalty=""none""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",39.03
+iris,1,50,0.9777777777777777,"Pipeline(
+    algorithms=[
+        NMF(alpha_W=0.0, l1_ratio=0.0, shuffle=True),
+        LogisticRegression(
+            C=9.991, fit_intercept=True, multi_class=""ovr"", penalty=""none""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",186.13
+iris,2,10,0.9555555555555556,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",44.81
+iris,2,50,0.9555555555555556,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",337.84
+wine,0,10,0.9811320754716981,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=False),
+        RobustScaler(unit_variance=True, with_centering=True, with_scaling=False),
+        RadiusNeighborsTransformer(
+            algorithm=""ball_tree"", leaf_size=1, mode=""distance"", p=3, radius=-9.995
+        ),
+        NuSVC(
+            break_ties=False,
+            cache_size=1,
+            coef0=-0.7138745548818844,
+            decision_function_shape=""ovr"",
+            degree=5,
+            gamma=""auto"",
+            kernel=""poly"",
+            probability=False,
+            shrinking=False,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",173.90
+wine,0,50,1.0,"Pipeline(
+    algorithms=[
+        SplineTransformer(
+            degree=1,
+            extrapolation=""linear"",
+            include_bias=False,
+            knots=""uniform"",
+            n_knots=9,
+            order=""f"",
+        ),
+        NuSVC(
+            break_ties=False,
+            cache_size=399,
+            coef0=0.992,
+            decision_function_shape=""ovr"",
+            degree=1,
+            gamma=""scale"",
+            kernel=""linear"",
+            probability=False,
+            shrinking=False,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",352.49
+wine,1,10,1.0,"Pipeline(
+    algorithms=[
+        SplineTransformer(
+            degree=1,
+            extrapolation=""linear"",
+            include_bias=True,
+            knots=""uniform"",
+            n_knots=9,
+            order=""f"",
+        ),
+        NuSVC(
+            break_ties=True,
+            cache_size=399,
+            coef0=0.977434493662873,
+            decision_function_shape=""ovr"",
+            degree=5,
+            gamma=""auto"",
+            kernel=""rbf"",
+            probability=True,
+            shrinking=True,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",166.69
+wine,1,50,1.0,"Pipeline(
+    algorithms=[
+        SplineTransformer(
+            degree=1,
+            extrapolation=""linear"",
+            include_bias=True,
+            knots=""uniform"",
+            n_knots=9,
+            order=""f"",
+        ),
+        NuSVC(
+            break_ties=True,
+            cache_size=399,
+            coef0=0.977434493662873,
+            decision_function_shape=""ovr"",
+            degree=5,
+            gamma=""auto"",
+            kernel=""rbf"",
+            probability=True,
+            shrinking=True,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",347.13
+wine,2,10,0.9811320754716981,"Pipeline(
+    algorithms=[
+        IncrementalPCA(whiten=True),
+        LinearSVC(
+            C=6.337397798630535,
+            dual=False,
+            fit_intercept=True,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",360.50
+wine,2,50,0.9811320754716981,"Pipeline(
+    algorithms=[
+        IncrementalPCA(whiten=True),
+        LinearSVC(
+            C=6.337397798630535,
+            dual=False,
+            fit_intercept=True,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",331.11
