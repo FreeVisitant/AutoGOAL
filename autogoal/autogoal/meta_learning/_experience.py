@@ -10,17 +10,16 @@ from datetime import date, datetime
 # Path to store experiences
 DATA_PATH = Path.home() / ".autogoal" / "experience_store"
 
-
 class Experience:
     def __init__(
         self,
-        algorithms: List[Dict[str, Any]],
-        dataset_features: np.ndarray,
-        system_features: np.ndarray,
-        dataset_feature_extractor_name: str,
-        system_feature_extractor_name: str,
-        timestamp: str,
-        alias: str,
+        algorithms: List[Dict[str, Any]] = None,
+        dataset_features: np.ndarray = None,
+        system_features: np.ndarray = None,
+        dataset_feature_extractor_name: str = None,
+        system_feature_extractor_name: str = None,
+        timestamp: str = None,
+        alias: str = None,
         cross_val_steps: Optional[int] = None,
         accuracy: Optional[float] = None,
         f1: Optional[float] = None,

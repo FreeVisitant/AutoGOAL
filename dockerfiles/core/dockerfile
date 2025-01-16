@@ -8,8 +8,13 @@ FROM python:3.9.16
 # Basic enviroment setup
 # ---------------------
 
-RUN apt-get update \
- && apt-get install -y \
+# Set default environment
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    apt-utils \
     curl \
     locales \
     nano \
@@ -19,9 +24,7 @@ RUN apt-get update \
     git \
     make \
     gcc \
-    build-essential \ 
-    python3-dev
-
+ && rm -rf /var/lib/apt/lists/*
 
 # =====================
 # User stuff
@@ -31,10 +34,12 @@ RUN apt-get update \
 RUN sed -i "s/# en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen \
   && locale-gen
 ENV LANG=en_US.UTF-8
-RUN chsh -s /bin/bash
 ENV SHELL=/bin/bash
-RUN adduser --gecos '' --disabled-password coder && \
-  echo "coder ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopasswd
+
+RUN adduser --gecos '' --disabled-password coder \
+  && echo "coder:admin-coder" | chpasswd \
+  # && echo "coder ALL=(ALL) ALL" >> /etc/sudoers.d/sudouser \
+  && usermod -s /bin/bash coder
 
 # ==========================================
 # Project-specific installation instruction
@@ -51,18 +56,15 @@ COPY makefile /home/coder/autogoal/
 
 # Setup poetry configuration
 RUN pip install -U pip setuptools
-RUN pip install poetry==1.2
+RUN pip install poetry==1.8.4
 RUN poetry config virtualenvs.create false
 
 SHELL ["/bin/bash", "-c"]
-USER coder
-RUN sudo mkdir -p /home/coder/autogoal/data && sudo chown coder:coder /home/coder/autogoal
-VOLUME /home/coder/autogoal
-RUN sudo rm -rf /home/coder/autogoal/storage
+RUN mkdir -p /home/coder/autogoal/data && rm -rf /home/coder/autogoal/storage && chown -R coder:coder /home/coder/autogoal
 
 # Set permissions for important directories
-RUN sudo chown -R coder /home/coder
-RUN sudo chown -R coder /opt/dev/cache
+RUN chown -R coder /home/coder
+RUN chown -R coder /opt/dev/cache
 
 # Copy code-base for autogoal-core
 COPY autogoal/ /home/coder/autogoal/autogoal
@@ -79,5 +81,12 @@ COPY scripts/ /home/coder/autogoal/scripts
 # Install autogoal core
 COPY dockerfiles/install-package.sh /home/coder/autogoal/install-package.sh 
 RUN sudo chmod +x install-package.sh && sudo ./install-package.sh core
+
+# Allow 'coder' to use sudo without a password
+RUN echo "coder ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/coder && sudo chmod 0440 /etc/sudoers.d/coder
+
+# Finally switch to coder so at runtime the user must supply the password for sudo:
+USER coder
+VOLUME /home/coder/autogoal
 
 CMD ["/bin/bash"]

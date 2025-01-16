@@ -1,6 +1,6 @@
 import math
 from typing import List
-from autogoal.search.utils import feature_scaling, non_dominated_sort
+from autogoal.search.utils import crowding_distance, feature_scaling, non_dominated_sort
 from ._pge import PESearch
 
 
@@ -38,30 +38,9 @@ class NSPESearch(PESearch):
                 indices.extend(front)
             else:
                 indices.extend(
-                    sorted(front, key=lambda i: -self.crowding_distance(fns, front, i))[
+                    sorted(front, key=lambda i: -crowding_distance(fns, front, self._maximize, i))[
                         : k - len(indices)
                     ]
                 )
                 break
         return indices
-
-    def crowding_distance(
-        self, scores: List[List[float]], front: List[int], index: int
-    ) -> float:
-        scaled_scores = feature_scaling(scores)
-
-        crowding_distances: List[float] = [0 for _ in scores]
-        for m in range(len(self._maximize)):
-            front = sorted(front, key=lambda x: scores[x][m])
-            crowding_distances[front[0]] = math.inf
-            crowding_distances[front[-1]] = math.inf
-            m_values = [scaled_scores[i][m] for i in front]
-            scale: float = max(m_values) - min(m_values)
-            if scale == 0:
-                scale = 1
-            for i in range(1, len(front) - 1):
-                crowding_distances[i] += (
-                    scaled_scores[front[i + 1]][m] - scaled_scores[front[i - 1]][m]
-                ) / scale
-
-        return crowding_distances[index]

@@ -1,13 +1,25 @@
-import numpy as np
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import cross_val_score, StratifiedKFold
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.decomposition import TruncatedSVD
 from autogoal.meta_learning.feature_extraction._base import FeatureExtractor
-from nltk.corpus import stopwords
 
 class TextClassificationFeatureExtractor(FeatureExtractor):
-    def extract_features(self, X_train, y_train) -> np.ndarray:
+    def extract_features(self, X_train, y_train):
+        try:
+            import numpy as np
+        except ImportError as e:
+            raise ImportError("NumPy not installed. Please install via 'pip install numpy'.") from e
+        
+        try:
+            from sklearn.tree import DecisionTreeClassifier
+            from sklearn.model_selection import cross_val_score, StratifiedKFold
+            from sklearn.feature_extraction.text import TfidfVectorizer
+            from sklearn.decomposition import TruncatedSVD
+        except ImportError as e:
+            raise ImportError("Scikit-learn not installed. Please install via 'pip install scikit-learn'.") from e
+        
+        try:
+            from nltk.corpus import stopwords
+        except ImportError as e:
+            raise ImportError("NLTK not installed. Please install via 'pip install nltk'.") from e
+        
         # Convert to numpy arrays
         X_train = np.array(X_train)
         y_train = np.array(y_train)
