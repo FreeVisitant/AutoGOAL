@@ -1,0 +1,75 @@
+categories,random_state,search_iters,best_score,time_seconds,best_pipeline
+"['comp.graphics', 'sci.med', 'rec.sport.baseball']",0,10,0.9699248120300752,355.29,"Pipeline(
+    algorithms=[
+        StandardScaler(with_mean=True, with_std=False),
+        RadiusNeighborsTransformer(
+            algorithm=""brute"", leaf_size=1, mode=""connectivity"", p=1, radius=-9.995
+        ),
+        LinearSVC(
+            C=6.787889466394165,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+"['comp.graphics', 'sci.med', 'rec.sport.baseball']",0,50,0.9680451127819549,357.39,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+"['comp.graphics', 'sci.med', 'rec.sport.baseball']",1,10,0.9586466165413534,324.69,"Pipeline(
+    algorithms=[
+        KBinsDiscretizer(encode=""onehot"", n_bins=5, strategy=""quantile""),
+        Perceptron(
+            early_stopping=False,
+            eta0=9.991,
+            fit_intercept=True,
+            l1_ratio=0.001,
+            n_iter_no_change=3,
+            shuffle=True,
+            tol=-0.0010779836920203202,
+            validation_fraction=0.993,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+"['comp.graphics', 'sci.med', 'rec.sport.baseball']",1,50,0.9586466165413534,318.46,"Pipeline(
+    algorithms=[
+        KBinsDiscretizer(encode=""onehot"", n_bins=5, strategy=""quantile""),
+        Perceptron(
+            early_stopping=False,
+            eta0=9.991,
+            fit_intercept=True,
+            l1_ratio=0.001,
+            n_iter_no_change=3,
+            shuffle=True,
+            tol=-0.0010779836920203202,
+            validation_fraction=0.993,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

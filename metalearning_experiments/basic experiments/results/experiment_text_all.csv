@@ -1,0 +1,65 @@
+domain,n_samples,n_features,n_classes,categories,random_state,search_iters,best_score,time_seconds,best_pipeline
+text,11314,3000,20,"['alt.atheism', 'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware', 'comp.windows.x', 'misc.forsale', 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey', 'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space', 'soc.religion.christian', 'talk.politics.guns', 'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc']",0,10,0.842368886269888,326.09,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,11314,3000,20,"['alt.atheism', 'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware', 'comp.windows.x', 'misc.forsale', 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey', 'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space', 'soc.religion.christian', 'talk.politics.guns', 'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc']",0,50,0.842368886269888,326.20,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,11314,3000,20,"['alt.atheism', 'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware', 'comp.windows.x', 'misc.forsale', 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey', 'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space', 'soc.religion.christian', 'talk.politics.guns', 'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc']",1,10,0.8367707719505009,362.50,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text,11314,3000,20,"['alt.atheism', 'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware', 'comp.windows.x', 'misc.forsale', 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey', 'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space', 'soc.religion.christian', 'talk.politics.guns', 'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc']",1,50,0.8367707719505009,359.92,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

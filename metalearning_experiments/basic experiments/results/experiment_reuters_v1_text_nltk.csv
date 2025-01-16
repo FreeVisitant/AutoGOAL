@@ -1,0 +1,65 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+nltk_reuters_singlelabel,10788,2000,79,0,10,0.8918,335.17,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters_singlelabel,10788,2000,79,0,50,0.8918,331.07,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters_singlelabel,10788,2000,79,1,10,0.8903,319.47,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters_singlelabel,10788,2000,79,1,50,0.8903,318.33,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

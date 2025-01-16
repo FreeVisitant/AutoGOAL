@@ -1,0 +1,53 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+nltk_movie_reviews,2000,2000,2,0,10,0.8333,324.56,"Pipeline(
+    algorithms=[
+        SVC(
+            C=1.5398932420778215,
+            break_ties=False,
+            cache_size=46,
+            coef0=-0.992,
+            decision_function_shape=""ovo"",
+            degree=1,
+            gamma=""scale"",
+            probability=False,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_movie_reviews,2000,2000,2,0,50,0.8333,327.82,"Pipeline(
+    algorithms=[
+        SVC(
+            C=1.5398932420778215,
+            break_ties=False,
+            cache_size=46,
+            coef0=-0.992,
+            decision_function_shape=""ovo"",
+            degree=1,
+            gamma=""scale"",
+            probability=False,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_movie_reviews,2000,2000,2,1,10,0.7933,310.39,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_movie_reviews,2000,2000,2,1,50,0.7933,308.25,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

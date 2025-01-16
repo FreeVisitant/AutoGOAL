@@ -1,0 +1,55 @@
+domain,n_train_samples,n_test_samples,n_features,n_classes,random_state,search_iters,train_score,test_score,time_seconds,best_pipeline
+text_20newsgroups_train_test,11314,7532,3000,20,0,10,0.8332351208014143,0.7343,314.60,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text_20newsgroups_train_test,11314,7532,3000,20,0,50,0.8352975839717148,0.7343,309.21,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text_20newsgroups_train_test,11314,7532,3000,20,1,10,0.857100766057749,0.7637,368.47,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=9.991, fit_intercept=True, multi_class=""auto"", penalty=""l2""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+text_20newsgroups_train_test,11314,7532,3000,20,1,50,0.857100766057749,0.7637,370.83,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=9.991, fit_intercept=True, multi_class=""auto"", penalty=""l2""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
