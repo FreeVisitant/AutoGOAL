@@ -1,0 +1,58 @@
+{
+    "algorithms": [
+        {
+            "RadiusNeighborsTransformer": {
+                "mode": {
+                    "value": "distance"
+                },
+                "radius": {
+                    "value": -9.995
+                },
+                "algorithm": {
+                    "value": "ball_tree"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "BernoulliNB": {
+                "alpha": {
+                    "value": 9.76818658952935
+                },
+                "binarize": {
+                    "value": -0.26583644824595404
+                },
+                "fit_prior": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8585254249094456,
+        0.0025,
+        0.2965,
+        0.008431703204047219,
+        22.3395,
+        24.660033247138983,
+        1.103875791630922,
+        0.654
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-08 03:07:34",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": 0.29797979797979796,
+    "evaluation_time": 0.0,
+    "error": null
+}

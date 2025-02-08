@@ -1,0 +1,73 @@
+{
+    "algorithms": [
+        {
+            "KNNImputer": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "metric": {
+                    "value": "nan_euclidean"
+                },
+                "add_indicator": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "SVC": {
+                "C": {
+                    "value": 2.7887920413540472
+                },
+                "degree": {
+                    "value": 3
+                },
+                "gamma": {
+                    "value": "scale"
+                },
+                "coef0": {
+                    "value": -0.992
+                },
+                "shrinking": {
+                    "value": true
+                },
+                "probability": {
+                    "value": false
+                },
+                "cache_size": {
+                    "value": 399
+                },
+                "decision_function_shape": {
+                    "value": "ovo"
+                },
+                "break_ties": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:47:49",
+    "alias": "imdb",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

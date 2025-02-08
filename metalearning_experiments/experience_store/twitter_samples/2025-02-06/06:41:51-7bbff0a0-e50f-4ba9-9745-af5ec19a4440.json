@@ -1,0 +1,33 @@
+{
+    "algorithms": [
+        {
+            "CategoricalNB": {
+                "fit_prior": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        10000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        68.5377,
+        37.13660429697363,
+        0.5418419978635646,
+        0.6489
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:41:51",
+    "alias": "twitter_samples",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "index 1 is out of bounds for axis 1 with size 1"
+}

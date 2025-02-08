@@ -159,7 +159,7 @@ class ExperienceStore:
             exclude = f".*({exclude}).*"
 
         # Traverse all alias directories
-        for alias_dir in ExperienceStore.DATA_PATH.iterdir():
+        for alias_dir in ExperienceStore.DATA_PATH.iterdir():      
             if alias_dir.is_dir():
                 alias = alias_dir.name
                 # Apply alias filtering

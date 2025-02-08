@@ -1,0 +1,100 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "n_components": {
+                    "value": 3
+                },
+                "eigen_solver": {
+                    "value": "dense"
+                },
+                "tol": {
+                    "value": 8
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "ball_tree"
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "FactorAnalysis": {
+                "tol": {
+                    "value": -0.09200118354834641
+                },
+                "svd_method": {
+                    "value": "lapack"
+                },
+                "iterated_power": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "PowerTransformer": {
+                "standardize": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "squared_hinge"
+                },
+                "dual": {
+                    "value": false
+                },
+                "C": {
+                    "value": 6.774122295643491
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:27:36",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "module 'numpy' has no attribute 'warnings'"
+}

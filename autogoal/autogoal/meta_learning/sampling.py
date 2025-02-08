@@ -28,7 +28,6 @@ class ExperienceSamplerMode(Enum):
     Replicate = "replicate"
     RegularSample = "regular-sample"
 
-
 class ExperienceReplayModelSampler(ModelSampler):
     """
     A ModelSampler that adjusts its internal probabilistic model based on external meta-knowledge,
@@ -116,25 +115,6 @@ class ExperienceReplayModelSampler(ModelSampler):
                                 return resolved_handle
                     else:
                         return resolved_handle
-            
-            # if not handle is None: # If handle is not None, we are looking for a specific parameter
-            #     parameter_value = None
-            #     for parameter in experience.finetuning_parameters:
-            #         if handle.endswith(parameter):
-            #             parameter_value = experience.finetuning_parameters[parameter]
-            #             break
-                
-            #     if parameter_value is not None:
-            #         return experience.finetuning_parameters[parameter]
-            #     else:
-            #         if hasattr(options[0], "name"): # If options are Symbol objects
-            #             option_names = [option.name for option in options]
-            #             if experience.finetuning_parameters["inner_model"] in option_names:
-            #                 return options[option_names.index(experience.finetuning_parameters["inner_model"])]
-                
-            # else: # If handle is None, we are looking for a specific finetuning method
-            #     if experience.finetuning_method in options:
-            #         return experience.finetuning_method
             
             return None
 

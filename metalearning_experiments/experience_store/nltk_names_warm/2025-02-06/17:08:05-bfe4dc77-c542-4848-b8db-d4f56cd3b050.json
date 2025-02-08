@@ -1,0 +1,55 @@
+{
+    "algorithms": [
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": false
+                },
+                "C": {
+                    "value": 0.005
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        7944.0,
+        2.0,
+        0.9510309701661749,
+        0.3704682779456193,
+        0.6295317220543807,
+        0.5884823035392921,
+        6.03285498489426,
+        1.5669204780747794,
+        0.25973116907305266,
+        0.6017120220406985
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 17:08:05",
+    "alias": "nltk_names_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False"
+}

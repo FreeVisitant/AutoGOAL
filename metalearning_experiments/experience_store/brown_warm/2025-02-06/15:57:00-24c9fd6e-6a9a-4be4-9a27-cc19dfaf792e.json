@@ -1,0 +1,97 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "n_components": {
+                    "value": 3
+                },
+                "eigen_solver": {
+                    "value": "auto"
+                },
+                "tol": {
+                    "value": -99
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "brute"
+                },
+                "p": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "SGDClassifier": {
+                "loss": {
+                    "value": "hinge"
+                },
+                "penalty": {
+                    "value": "l2"
+                },
+                "l1_ratio": {
+                    "value": 0.870344370713324
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.003596075716160701
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "epsilon": {
+                    "value": 0.8378315837942982
+                },
+                "learning_rate": {
+                    "value": "optimal"
+                },
+                "eta0": {
+                    "value": -0.3597015470177506
+                },
+                "power_t": {
+                    "value": 4.991
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.08692939568105235
+                },
+                "n_iter_no_change": {
+                    "value": 9
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:57:00",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": 0.25,
+    "evaluation_time": 0.0,
+    "error": null
+}

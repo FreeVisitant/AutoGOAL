@@ -1,0 +1,255 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+movie_reviews_nltk,2000,2000,2,0,10,0.8166666666666667,319.72,"Pipeline(
+    algorithms=[
+        OneHotEncoder(categories=""auto"", handle_unknown=""ignore"", sparse=False),
+        NuSVC(
+            break_ties=True,
+            cache_size=399,
+            coef0=0.992,
+            decision_function_shape=""ovr"",
+            degree=5,
+            gamma=""scale"",
+            kernel=""sigmoid"",
+            probability=False,
+            shrinking=True,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,50,0.8166666666666667,319.30,"Pipeline(
+    algorithms=[
+        Perceptron(
+            early_stopping=False,
+            eta0=0.005,
+            fit_intercept=True,
+            l1_ratio=0.001,
+            n_iter_no_change=1,
+            shuffle=True,
+            tol=-0.0029935249575795703,
+            validation_fraction=0.993,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,10,0.8466666666666667,349.11,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        KBinsDiscretizer(encode=""ordinal"", n_bins=6, strategy=""quantile""),
+        MultinomialNB(fit_prior=True),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,50,0.8466666666666667,360.27,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        KBinsDiscretizer(encode=""ordinal"", n_bins=6, strategy=""quantile""),
+        MultinomialNB(fit_prior=True),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,10,0.7866666666666666,357.28,"Pipeline(
+    algorithms=[
+        PolynomialFeatures(degree=1),
+        LinearSVC(
+            C=2.7823926779657233,
+            dual=False,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,50,0.7866666666666666,360.18,"Pipeline(
+    algorithms=[
+        PolynomialFeatures(degree=1),
+        LinearSVC(
+            C=2.7823926779657233,
+            dual=False,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,10,0.83,340.14,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=4.487730988139727, fit_intercept=False, multi_class=""ovr"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,50,0.83,343.83,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=4.487730988139727, fit_intercept=False, multi_class=""ovr"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,10,0.815,313.09,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""ovr"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,50,0.815,315.83,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""ovr"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,10,0.8233333333333334,334.47,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=False, sublinear_tf=True, use_idf=True),
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""ovr"", penalty=""none""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,50,0.8233333333333334,332.18,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=False, sublinear_tf=True, use_idf=True),
+        LogisticRegression(
+            C=0.005, fit_intercept=True, multi_class=""ovr"", penalty=""none""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,10,0.6816666666666666,235.37,"Pipeline(
+    algorithms=[
+        KNeighborsClassifier(
+            algorithm=""auto"",
+            leaf_size=37,
+            metric=""l2"",
+            n_neighbors=7,
+            p=1,
+            weights=""distance"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,10,0.8233333333333334,334.61,"Pipeline(
+    algorithms=[
+        NuSVC(
+            break_ties=True,
+            cache_size=399,
+            coef0=0.3038339788053719,
+            decision_function_shape=""ovr"",
+            degree=1,
+            gamma=""scale"",
+            kernel=""sigmoid"",
+            probability=True,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,0,50,0.8233333333333334,328.23,"Pipeline(
+    algorithms=[
+        NuSVC(
+            break_ties=True,
+            cache_size=399,
+            coef0=0.3038339788053719,
+            decision_function_shape=""ovr"",
+            degree=1,
+            gamma=""scale"",
+            kernel=""sigmoid"",
+            probability=True,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,10,0.815,357.65,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=False, sublinear_tf=True, use_idf=True),
+        PassiveAggressiveClassifier(
+            C=9.991,
+            average=False,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=9,
+            shuffle=True,
+            tol=-0.0031725347855186734,
+            validation_fraction=0.993,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+movie_reviews_nltk,2000,2000,2,1,50,0.815,327.33,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=False, sublinear_tf=True, use_idf=True),
+        PassiveAggressiveClassifier(
+            C=9.991,
+            average=False,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=9,
+            shuffle=True,
+            tol=-0.0031725347855186734,
+            validation_fraction=0.993,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

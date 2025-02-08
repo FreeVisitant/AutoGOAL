@@ -1,0 +1,17 @@
+dataset,random_state,search_iterations,score,pipeline,time_seconds
+wine,2,10,-inf,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=8.694321127586278,
+            dual=False,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)",0.75

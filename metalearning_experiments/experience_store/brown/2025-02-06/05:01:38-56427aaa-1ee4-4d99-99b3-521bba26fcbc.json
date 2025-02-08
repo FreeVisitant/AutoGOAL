@@ -1,0 +1,100 @@
+{
+    "algorithms": [
+        {
+            "NMF": {
+                "alpha_W": {
+                    "value": 0.0
+                },
+                "l1_ratio": {
+                    "value": 0.0
+                },
+                "shuffle": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PCA": {
+                "whiten": {
+                    "value": true
+                },
+                "svd_solver": {
+                    "value": "auto"
+                },
+                "tol": {
+                    "value": 0.992
+                },
+                "iterated_power": {
+                    "value": "auto"
+                }
+            }
+        },
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 2
+                },
+                "degree": {
+                    "value": 2
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "constant"
+                },
+                "include_bias": {
+                    "value": true
+                },
+                "order": {
+                    "value": "c"
+                }
+            }
+        },
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "LogisticRegression": {
+                "penalty": {
+                    "value": "none"
+                },
+                "C": {
+                    "value": 7.658902976275724
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "multi_class": {
+                    "value": "ovr"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:01:38",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

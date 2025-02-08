@@ -1,0 +1,53 @@
+{
+    "algorithms": [
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "parallel"
+                },
+                "whiten": {
+                    "value": false
+                },
+                "fun": {
+                    "value": "exp"
+                }
+            }
+        },
+        {
+            "MultinomialNB": {
+                "fit_prior": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:59:12",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "shapes (356,356) and (3001,356) not aligned: 356 (dim 1) != 3001 (dim 0)"
+}

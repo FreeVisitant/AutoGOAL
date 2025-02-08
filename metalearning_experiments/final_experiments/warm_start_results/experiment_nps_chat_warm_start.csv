@@ -1,0 +1,57 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+nps_chat_warm,2000,2000,15,0,10,0.47554806070826305,318.98,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,0,50,0.47554806070826305,305.75,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,1,10,0.4957841483979764,303.53,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,1,50,0.4957841483979764,312.63,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,0,10,0.4696969696969697,320.97,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,0,50,0.4696969696969697,308.48,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,1,10,0.4595959595959596,303.04,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat_warm,2000,2000,15,1,50,0.4595959595959596,304.78,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

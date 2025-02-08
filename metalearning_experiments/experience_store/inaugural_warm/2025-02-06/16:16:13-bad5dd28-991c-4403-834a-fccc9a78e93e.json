@@ -1,0 +1,54 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 9
+                },
+                "n_components": {
+                    "value": 2
+                },
+                "eigen_solver": {
+                    "value": "arpack"
+                },
+                "tol": {
+                    "value": 99
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "ball_tree"
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "GaussianNB": {}
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:16:13",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": 0.8823529411764706,
+    "evaluation_time": 0.0,
+    "error": null
+}

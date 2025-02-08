@@ -1,0 +1,54 @@
+{
+    "algorithms": [
+        {
+            "Perceptron": {
+                "l1_ratio": {
+                    "value": 0.4309128762848309
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": -0.00449395493865479
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "eta0": {
+                    "value": 9.991
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.5067150707075472
+                },
+                "n_iter_no_change": {
+                    "value": 2
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:50:40",
+    "alias": "imdb",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "((17500, 3000), dtype('float64'))"
+}

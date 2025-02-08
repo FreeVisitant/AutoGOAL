@@ -1,0 +1,62 @@
+{
+    "algorithms": [
+        {
+            "PowerTransformer": {
+                "standardize": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "KBinsDiscretizer": {
+                "n_bins": {
+                    "value": 9
+                },
+                "encode": {
+                    "value": "onehot"
+                },
+                "strategy": {
+                    "value": "uniform"
+                }
+            }
+        },
+        {
+            "ExtraTreeClassifier": {
+                "min_samples_split": {
+                    "value": 2
+                },
+                "min_weight_fraction_leaf": {
+                    "value": 0.5
+                },
+                "min_impurity_decrease": {
+                    "value": 0.33181532096906496
+                },
+                "ccp_alpha": {
+                    "value": 0.6850975603195231
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:17:29",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "module 'numpy' has no attribute 'warnings'"
+}

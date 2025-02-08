@@ -1,0 +1,93 @@
+{
+    "algorithms": [
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 5
+                },
+                "degree": {
+                    "value": 5
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "periodic"
+                },
+                "include_bias": {
+                    "value": false
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 2
+                }
+            }
+        },
+        {
+            "StandardScaler": {
+                "with_mean": {
+                    "value": true
+                },
+                "with_std": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "Perceptron": {
+                "l1_ratio": {
+                    "value": 0.001
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": -0.0008027718096865373
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "eta0": {
+                    "value": 0.005
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 1
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        3893.002,
+        1711.99769246223,
+        0.4397628597319575,
+        0.6705000000000001
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:55:41",
+    "alias": "movie_reviews_nltk",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Periodic splines require degree < n_knots. Got n_knots=5 and degree=5."
+}

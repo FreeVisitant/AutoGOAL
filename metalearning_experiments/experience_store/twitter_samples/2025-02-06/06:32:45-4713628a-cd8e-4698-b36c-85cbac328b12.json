@@ -1,0 +1,75 @@
+{
+    "algorithms": [
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PCA": {
+                "whiten": {
+                    "value": false
+                },
+                "svd_solver": {
+                    "value": "arpack"
+                },
+                "tol": {
+                    "value": -0.992
+                },
+                "iterated_power": {
+                    "value": "auto"
+                }
+            }
+        },
+        {
+            "StandardScaler": {
+                "with_mean": {
+                    "value": false
+                },
+                "with_std": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "LogisticRegression": {
+                "penalty": {
+                    "value": "none"
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "multi_class": {
+                    "value": "auto"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        10000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        68.5377,
+        37.13660429697363,
+        0.5418419978635646,
+        0.6489
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:32:45",
+    "alias": "twitter_samples",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

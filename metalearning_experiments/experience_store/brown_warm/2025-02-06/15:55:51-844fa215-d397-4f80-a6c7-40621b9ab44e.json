@@ -1,0 +1,52 @@
+{
+    "algorithms": [
+        {
+            "KBinsDiscretizer": {
+                "n_bins": {
+                    "value": 2
+                },
+                "encode": {
+                    "value": "onehot"
+                },
+                "strategy": {
+                    "value": "uniform"
+                }
+            }
+        },
+        {
+            "RidgeClassifier": {
+                "fit_intercept": {
+                    "value": false
+                },
+                "solver": {
+                    "value": "lsqr"
+                },
+                "positive": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:55:51",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": 0.3958333333333333,
+    "evaluation_time": 0.0,
+    "error": null
+}

@@ -1,0 +1,115 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 6
+                },
+                "n_components": {
+                    "value": 3
+                },
+                "eigen_solver": {
+                    "value": "auto"
+                },
+                "tol": {
+                    "value": 75
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "kd_tree"
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "StandardScaler": {
+                "with_mean": {
+                    "value": false
+                },
+                "with_std": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "TfidfTransformer": {
+                "norm": {
+                    "value": "l2"
+                },
+                "use_idf": {
+                    "value": true
+                },
+                "smooth_idf": {
+                    "value": true
+                },
+                "sublinear_tf": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "SVC": {
+                "C": {
+                    "value": 2.3899410017864176
+                },
+                "degree": {
+                    "value": 1
+                },
+                "gamma": {
+                    "value": "scale"
+                },
+                "coef0": {
+                    "value": -0.2855013436959716
+                },
+                "shrinking": {
+                    "value": true
+                },
+                "probability": {
+                    "value": true
+                },
+                "cache_size": {
+                    "value": 399
+                },
+                "decision_function_shape": {
+                    "value": "ovo"
+                },
+                "break_ties": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:22:38",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Input contains NaN, infinity or a value too large for dtype('float64')."
+}

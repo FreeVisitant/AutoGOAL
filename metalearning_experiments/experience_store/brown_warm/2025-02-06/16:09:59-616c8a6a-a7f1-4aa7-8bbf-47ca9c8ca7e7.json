@@ -1,0 +1,61 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 7
+                },
+                "n_components": {
+                    "value": 3
+                },
+                "eigen_solver": {
+                    "value": "auto"
+                },
+                "tol": {
+                    "value": 99
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "auto"
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "ComplementNB": {
+                "fit_prior": {
+                    "value": true
+                },
+                "norm": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:09:59",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Negative values in data passed to ComplementNB (input X)"
+}

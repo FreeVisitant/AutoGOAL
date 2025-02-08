@@ -1,0 +1,57 @@
+{
+    "algorithms": [
+        {
+            "NuSVC": {
+                "kernel": {
+                    "value": "linear"
+                },
+                "degree": {
+                    "value": 5
+                },
+                "gamma": {
+                    "value": "auto"
+                },
+                "coef0": {
+                    "value": 0.992
+                },
+                "shrinking": {
+                    "value": false
+                },
+                "probability": {
+                    "value": true
+                },
+                "cache_size": {
+                    "value": 399
+                },
+                "decision_function_shape": {
+                    "value": "ovo"
+                },
+                "break_ties": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8962763155076177,
+        0.003,
+        0.289,
+        0.010380622837370243,
+        21.333,
+        21.71115176585526,
+        1.0177261409954184,
+        0.639
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 18:18:59",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "specified nu is infeasible"
+}

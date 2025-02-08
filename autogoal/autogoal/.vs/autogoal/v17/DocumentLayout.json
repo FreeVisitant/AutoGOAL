@@ -1,0 +1,141 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\sampling.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:meta_learning\\sampling.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\sampling\\__init__.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sampling\\__init__.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\warm_start.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:meta_learning\\warm_start.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\search\\_warm_start_pge.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:search\\_warm_start_pge.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\ml\\_metalearning.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ml\\_metalearning.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\normalization\\__init__.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:meta_learning\\normalization\\__init__.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\acl_latex.tex||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:meta_learning\\acl_latex.tex||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sampling.py",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\sampling.py",
+              "RelativeDocumentMoniker": "meta_learning\\sampling.py",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\sampling.py",
+              "RelativeToolTip": "meta_learning\\sampling.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-15T18:08:34.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "__init__.py",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\sampling\\__init__.py",
+              "RelativeDocumentMoniker": "sampling\\__init__.py",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\sampling\\__init__.py",
+              "RelativeToolTip": "sampling\\__init__.py",
+              "ViewState": "AgIAACUCAAAAAAAAAAAYwCYCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-15T18:08:27.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_warm_start_pge.py",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\search\\_warm_start_pge.py",
+              "RelativeDocumentMoniker": "search\\_warm_start_pge.py",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\search\\_warm_start_pge.py",
+              "RelativeToolTip": "search\\_warm_start_pge.py",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-15T18:07:05.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_metalearning.py",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\ml\\_metalearning.py",
+              "RelativeDocumentMoniker": "ml\\_metalearning.py",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\ml\\_metalearning.py",
+              "RelativeToolTip": "ml\\_metalearning.py",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-15T18:06:45.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "__init__.py",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\normalization\\__init__.py",
+              "RelativeDocumentMoniker": "meta_learning\\normalization\\__init__.py",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\normalization\\__init__.py",
+              "RelativeToolTip": "meta_learning\\normalization\\__init__.py",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-15T17:20:33.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "acl_latex.tex",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\acl_latex.tex",
+              "RelativeDocumentMoniker": "meta_learning\\acl_latex.tex",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\acl_latex.tex",
+              "RelativeToolTip": "meta_learning\\acl_latex.tex",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAQwJYBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-15T16:23:44.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "warm_start.py",
+              "DocumentMoniker": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\warm_start.py",
+              "RelativeDocumentMoniker": "meta_learning\\warm_start.py",
+              "ToolTip": "D:\\paper finetuning\\datasets\\writing\\autogoal\\autogoal\\autogoal\\meta_learning\\warm_start.py",
+              "RelativeToolTip": "meta_learning\\warm_start.py",
+              "ViewState": "AgIAAEECAAAAAAAAAAAlwFQCAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-14T23:23:57.448Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

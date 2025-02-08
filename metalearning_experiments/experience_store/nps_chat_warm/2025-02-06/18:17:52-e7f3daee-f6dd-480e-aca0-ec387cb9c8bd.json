@@ -1,0 +1,98 @@
+{
+    "algorithms": [
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 3
+                },
+                "degree": {
+                    "value": 4
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "error"
+                },
+                "include_bias": {
+                    "value": false
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "deflation"
+                },
+                "whiten": {
+                    "value": true
+                },
+                "fun": {
+                    "value": "exp"
+                }
+            }
+        },
+        {
+            "RobustScaler": {
+                "with_centering": {
+                    "value": true
+                },
+                "with_scaling": {
+                    "value": true
+                },
+                "unit_variance": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 4
+                }
+            }
+        },
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "NearestCentroid": {}
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8962763155076177,
+        0.003,
+        0.289,
+        0.010380622837370243,
+        21.333,
+        21.71115176585526,
+        1.0177261409954184,
+        0.639
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 18:17:52",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

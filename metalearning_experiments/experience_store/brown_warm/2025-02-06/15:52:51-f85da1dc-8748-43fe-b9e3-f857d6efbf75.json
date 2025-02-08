@@ -1,0 +1,61 @@
+{
+    "algorithms": [
+        {
+            "NMF": {
+                "alpha_W": {
+                    "value": 0.0
+                },
+                "l1_ratio": {
+                    "value": 0.0
+                },
+                "shuffle": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "KNeighborsClassifier": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "distance"
+                },
+                "algorithm": {
+                    "value": "auto"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 1
+                },
+                "metric": {
+                    "value": "l2"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:52:51",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

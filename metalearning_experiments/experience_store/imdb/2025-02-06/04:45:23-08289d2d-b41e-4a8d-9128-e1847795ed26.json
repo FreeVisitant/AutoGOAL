@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "KNeighborsTransformer": {
+                "mode": {
+                    "value": "connectivity"
+                },
+                "n_neighbors": {
+                    "value": 5
+                },
+                "algorithm": {
+                    "value": "brute"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": false
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "multi_class": {
+                    "value": "crammer_singer"
+                },
+                "fit_intercept": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:45:23",
+    "alias": "imdb",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "((7669, 17500), dtype('float64'))"
+}

@@ -1,0 +1,72 @@
+{
+    "algorithms": [
+        {
+            "SGDClassifier": {
+                "loss": {
+                    "value": "epsilon_insensitive"
+                },
+                "penalty": {
+                    "value": "l1"
+                },
+                "l1_ratio": {
+                    "value": 0.999
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": -0.0030290936971937663
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "epsilon": {
+                    "value": 0.993
+                },
+                "learning_rate": {
+                    "value": "optimal"
+                },
+                "eta0": {
+                    "value": -0.21734406300491368
+                },
+                "power_t": {
+                    "value": 0.9093282537366754
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 1
+                },
+                "average": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.836726716298423,
+        0.003,
+        0.292,
+        0.010273972602739727,
+        21.1935,
+        21.520247622878323,
+        1.0154173507385906,
+        0.6555
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:05:47",
+    "alias": "nps_chat",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "The test_size = 9 should be greater or equal to the number of classes = 15"
+}

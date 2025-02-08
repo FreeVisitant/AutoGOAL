@@ -1,0 +1,43 @@
+{
+    "algorithms": [
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "MultinomialNB": {
+                "fit_prior": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8585254249094456,
+        0.0025,
+        0.2965,
+        0.008431703204047219,
+        22.3395,
+        24.660033247138983,
+        1.103875791630922,
+        0.654
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-08 03:03:28",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Found unknown categories [0.24927543889496734, 0.30312180238534264, 0.3074358252213514, 0.3282240128852617, 0.329591992449272, 0.3336108993244305, 0.3556641521197012, 0.39619489463136537, 0.4819956441026773] in column 0 during transform"
+}

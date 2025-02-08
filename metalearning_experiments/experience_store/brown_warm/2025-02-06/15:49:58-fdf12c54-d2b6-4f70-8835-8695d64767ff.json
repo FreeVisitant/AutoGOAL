@@ -1,0 +1,70 @@
+{
+    "algorithms": [
+        {
+            "KNNImputer": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "distance"
+                },
+                "metric": {
+                    "value": "nan_euclidean"
+                },
+                "add_indicator": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "Perceptron": {
+                "l1_ratio": {
+                    "value": 0.24446406699183265
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.003982902761162973
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "eta0": {
+                    "value": 8.050825151978351
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.993
+                },
+                "n_iter_no_change": {
+                    "value": 4
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:49:58",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "The train_size = 2 should be greater or equal to the number of classes = 15"
+}

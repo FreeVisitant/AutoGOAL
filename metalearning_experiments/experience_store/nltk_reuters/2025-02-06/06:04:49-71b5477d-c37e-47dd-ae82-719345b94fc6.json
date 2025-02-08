@@ -1,0 +1,54 @@
+{
+    "algorithms": [
+        {
+            "Perceptron": {
+                "l1_ratio": {
+                    "value": 0.999
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": -0.005
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "eta0": {
+                    "value": 9.991
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.030467779976721343
+                },
+                "n_iter_no_change": {
+                    "value": 1
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        6577.0,
+        58.0,
+        3.050365200866029,
+        0.0001520450053215752,
+        0.43180781511327354,
+        0.00035211267605633805,
+        755.1208757792307,
+        809.7191535546324,
+        1.072304023801567,
+        0.7146105839795671
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:04:49",
+    "alias": "nltk_reuters",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2."
+}

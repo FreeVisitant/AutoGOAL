@@ -1,0 +1,122 @@
+{
+    "algorithms": [
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "deflation"
+                },
+                "whiten": {
+                    "value": false
+                },
+                "fun": {
+                    "value": "cube"
+                }
+            }
+        },
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 9
+                },
+                "degree": {
+                    "value": 5
+                },
+                "knots": {
+                    "value": "uniform"
+                },
+                "extrapolation": {
+                    "value": "continue"
+                },
+                "include_bias": {
+                    "value": true
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "deflation"
+                },
+                "whiten": {
+                    "value": true
+                },
+                "fun": {
+                    "value": "logcosh"
+                }
+            }
+        },
+        {
+            "KNNImputer": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "distance"
+                },
+                "metric": {
+                    "value": "nan_euclidean"
+                },
+                "add_indicator": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "StandardScaler": {
+                "with_mean": {
+                    "value": false
+                },
+                "with_std": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "KNeighborsClassifier": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "algorithm": {
+                    "value": "ball_tree"
+                },
+                "leaf_size": {
+                    "value": 1
+                },
+                "p": {
+                    "value": 1
+                },
+                "metric": {
+                    "value": "haversine"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:54:35",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

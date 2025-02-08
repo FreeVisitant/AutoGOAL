@@ -1,0 +1,61 @@
+{
+    "algorithms": [
+        {
+            "FactorAnalysis": {
+                "tol": {
+                    "value": -0.093
+                },
+                "svd_method": {
+                    "value": "randomized"
+                },
+                "iterated_power": {
+                    "value": 4
+                }
+            }
+        },
+        {
+            "KNeighborsClassifier": {
+                "n_neighbors": {
+                    "value": 9
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "algorithm": {
+                    "value": "brute"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 1
+                },
+                "metric": {
+                    "value": "manhattan"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:05:00",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

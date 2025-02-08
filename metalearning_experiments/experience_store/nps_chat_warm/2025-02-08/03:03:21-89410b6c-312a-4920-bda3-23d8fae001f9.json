@@ -1,0 +1,49 @@
+{
+    "algorithms": [
+        {
+            "NMF": {
+                "alpha_W": {
+                    "value": 0.0
+                },
+                "l1_ratio": {
+                    "value": 0.0
+                },
+                "shuffle": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "ComplementNB": {
+                "fit_prior": {
+                    "value": true
+                },
+                "norm": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8585254249094456,
+        0.0025,
+        0.2965,
+        0.008431703204047219,
+        22.3395,
+        24.660033247138983,
+        1.103875791630922,
+        0.654
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-08 03:03:21",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

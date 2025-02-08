@@ -1,0 +1,54 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 6
+                },
+                "n_components": {
+                    "value": 1
+                },
+                "eigen_solver": {
+                    "value": "dense"
+                },
+                "tol": {
+                    "value": -99
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "ball_tree"
+                },
+                "p": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "GaussianNB": {}
+        }
+    ],
+    "dataset_features": [
+        7944.0,
+        2.0,
+        0.9510309701661749,
+        0.3704682779456193,
+        0.6295317220543807,
+        0.5884823035392921,
+        6.03285498489426,
+        1.5669204780747794,
+        0.25973116907305266,
+        0.6017120220406985
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 17:12:17",
+    "alias": "nltk_names_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

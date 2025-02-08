@@ -1,0 +1,61 @@
+{
+    "algorithms": [
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": 8.18965655127247
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.0018045668562163832
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.993
+                },
+                "n_iter_no_change": {
+                    "value": 6
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:59:11",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "The train_size = 2 should be greater or equal to the number of classes = 15"
+}

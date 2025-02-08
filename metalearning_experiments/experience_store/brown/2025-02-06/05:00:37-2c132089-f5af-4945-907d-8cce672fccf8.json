@@ -1,0 +1,74 @@
+{
+    "algorithms": [
+        {
+            "LatentDirichletAllocation": {}
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "deflation"
+                },
+                "whiten": {
+                    "value": false
+                },
+                "fun": {
+                    "value": "cube"
+                }
+            }
+        },
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "KNeighborsClassifier": {
+                "n_neighbors": {
+                    "value": 9
+                },
+                "weights": {
+                    "value": "distance"
+                },
+                "algorithm": {
+                    "value": "ball_tree"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 1
+                },
+                "metric": {
+                    "value": "haversine"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:00:37",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Haversine distance only valid in 2 dimensions"
+}

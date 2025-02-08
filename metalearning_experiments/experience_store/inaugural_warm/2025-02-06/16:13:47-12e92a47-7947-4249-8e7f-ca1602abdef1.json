@@ -1,0 +1,93 @@
+{
+    "algorithms": [
+        {
+            "KNNImputer": {
+                "n_neighbors": {
+                    "value": 9
+                },
+                "weights": {
+                    "value": "distance"
+                },
+                "metric": {
+                    "value": "nan_euclidean"
+                },
+                "add_indicator": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "parallel"
+                },
+                "whiten": {
+                    "value": true
+                },
+                "fun": {
+                    "value": "exp"
+                }
+            }
+        },
+        {
+            "TfidfTransformer": {
+                "norm": {
+                    "value": "l2"
+                },
+                "use_idf": {
+                    "value": false
+                },
+                "smooth_idf": {
+                    "value": true
+                },
+                "sublinear_tf": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "KNeighborsClassifier": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "algorithm": {
+                    "value": "ball_tree"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 3
+                },
+                "metric": {
+                    "value": "manhattan"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:13:47",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Input contains NaN, infinity or a value too large for dtype('float64')."
+}

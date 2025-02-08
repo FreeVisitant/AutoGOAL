@@ -1,0 +1,72 @@
+{
+    "algorithms": [
+        {
+            "SGDClassifier": {
+                "loss": {
+                    "value": "huber"
+                },
+                "penalty": {
+                    "value": "elasticnet"
+                },
+                "l1_ratio": {
+                    "value": 0.001
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.0004369660825731545
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "epsilon": {
+                    "value": 0.993
+                },
+                "learning_rate": {
+                    "value": "optimal"
+                },
+                "eta0": {
+                    "value": -0.7479275962795932
+                },
+                "power_t": {
+                    "value": -0.042631214405816464
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.04361348488023514
+                },
+                "n_iter_no_change": {
+                    "value": 5
+                },
+                "average": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:24:08",
+    "alias": "imdb_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

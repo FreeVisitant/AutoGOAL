@@ -1,0 +1,77 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+inaugural_warm,59,3000,2,0,10,0.9411764705882353,305.47,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=True, sublinear_tf=True, use_idf=True),
+        PassiveAggressiveClassifier(
+            C=9.884536587116816,
+            average=True,
+            early_stopping=False,
+            fit_intercept=False,
+            n_iter_no_change=5,
+            shuffle=True,
+            tol=-0.005,
+            validation_fraction=0.993,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural_warm,59,3000,2,0,50,1.0,305.49,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=True, sublinear_tf=True, use_idf=True),
+        PassiveAggressiveClassifier(
+            C=9.558997091232484,
+            average=True,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=5,
+            shuffle=True,
+            tol=-0.005,
+            validation_fraction=0.993,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural_warm,59,3000,2,1,10,0.9411764705882353,332.78,"Pipeline(
+    algorithms=[
+        TruncatedSVD(algorithm=""randomized"", n_components=68, n_iter=1, tol=-0.992),
+        PassiveAggressiveClassifier(
+            C=9.991,
+            average=True,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=5,
+            shuffle=False,
+            tol=-0.005,
+            validation_fraction=0.7257479841384811,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural_warm,59,3000,2,1,50,0.9411764705882353,328.19,"Pipeline(
+    algorithms=[
+        TruncatedSVD(algorithm=""randomized"", n_components=68, n_iter=1, tol=-0.992),
+        PassiveAggressiveClassifier(
+            C=9.991,
+            average=True,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=5,
+            shuffle=False,
+            tol=-0.005,
+            validation_fraction=0.7354231091219581,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

@@ -1,0 +1,73 @@
+{
+    "algorithms": [
+        {
+            "RadiusNeighborsTransformer": {
+                "mode": {
+                    "value": "distance"
+                },
+                "radius": {
+                    "value": 9.991
+                },
+                "algorithm": {
+                    "value": "auto"
+                },
+                "leaf_size": {
+                    "value": 22
+                },
+                "p": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": -9.995
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": 0.001
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 9
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.836726716298423,
+        0.003,
+        0.292,
+        0.010273972602739727,
+        21.1935,
+        21.520247622878323,
+        1.0154173507385906,
+        0.6555
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:07:51",
+    "alias": "nps_chat",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

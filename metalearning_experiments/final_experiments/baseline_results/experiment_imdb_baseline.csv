@@ -1,0 +1,188 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+imdb,25000,3000,2,0,10,0.8468,305.85,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,50,0.8468,303.49,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,10,0.8434666666666667,329.65,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=True, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,50,0.8434666666666667,324.21,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=True, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,10,0.8474666666666667,350.64,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=0.005,
+            dual=False,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,50,0.8474666666666667,346.10,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=0.005,
+            dual=False,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,10,0.8482666666666666,306.13,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,50,0.8482666666666666,351.92,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,10,0.8482666666666666,360.02,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,50,0.8482666666666666,350.71,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,10,0.8442666666666667,329.67,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,50,0.8442666666666667,334.98,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,10,0.7810666666666667,316.69,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,50,0.7810666666666667,332.34,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,10,0.7926666666666666,30.08,"Pipeline(
+    algorithms=[
+        PassiveAggressiveClassifier(
+            C=9.991,
+            average=False,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=1,
+            shuffle=True,
+            tol=-0.005,
+            validation_fraction=0.993,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,10,0.8444,301.08,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,10,0.8444,303.61,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,0,50,0.8444,301.90,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,10,0.8434666666666667,345.39,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+imdb,25000,3000,2,1,50,0.8434666666666667,330.52,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

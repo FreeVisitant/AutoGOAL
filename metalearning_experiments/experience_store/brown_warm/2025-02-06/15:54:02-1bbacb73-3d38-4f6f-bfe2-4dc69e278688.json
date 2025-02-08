@@ -1,0 +1,71 @@
+{
+    "algorithms": [
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "PCA": {
+                "whiten": {
+                    "value": false
+                },
+                "svd_solver": {
+                    "value": "full"
+                },
+                "tol": {
+                    "value": -0.992
+                },
+                "iterated_power": {
+                    "value": "randomized"
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": true
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:54:02",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": 0.4027777777777778,
+    "evaluation_time": 0.0,
+    "error": null
+}

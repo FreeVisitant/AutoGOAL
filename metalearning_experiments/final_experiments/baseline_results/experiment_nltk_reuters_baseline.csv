@@ -1,0 +1,203 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+nltk_reuters,6577,5000,58,0,10,0.7864476386036962,333.96,"Pipeline(
+    algorithms=[
+        SplineTransformer(
+            degree=2,
+            extrapolation=""continue"",
+            include_bias=False,
+            knots=""uniform"",
+            n_knots=2,
+            order=""f"",
+        ),
+        GaussianNB(),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,50,0.7864476386036962,325.85,"Pipeline(
+    algorithms=[
+        SplineTransformer(
+            degree=2,
+            extrapolation=""continue"",
+            include_bias=False,
+            knots=""uniform"",
+            n_knots=2,
+            order=""f"",
+        ),
+        GaussianNB(),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,10,0.8218685831622177,305.10,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,50,0.8218685831622177,318.72,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,10,0.9281314168377823,378.16,"Pipeline(
+    algorithms=[
+        Perceptron(
+            early_stopping=False,
+            eta0=9.701366421477235,
+            fit_intercept=False,
+            l1_ratio=0.866269774569341,
+            n_iter_no_change=2,
+            shuffle=True,
+            tol=0.001,
+            validation_fraction=0.993,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,50,0.9281314168377823,372.91,"Pipeline(
+    algorithms=[
+        Perceptron(
+            early_stopping=False,
+            eta0=9.701366421477235,
+            fit_intercept=False,
+            l1_ratio=0.866269774569341,
+            n_iter_no_change=2,
+            shuffle=True,
+            tol=0.001,
+            validation_fraction=0.993,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,10,0.8978439425051334,308.19,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,50,0.8978439425051334,309.95,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=False, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,10,0.43737166324435317,340.55,"Pipeline(
+    algorithms=[
+        KBinsDiscretizer(encode=""ordinal"", n_bins=6, strategy=""quantile""),
+        DecisionTreeClassifier(
+            ccp_alpha=0.0,
+            min_impurity_decrease=0.2817529217172294,
+            min_samples_split=2,
+            min_weight_fraction_leaf=0.5,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,50,0.43737166324435317,341.61,"Pipeline(
+    algorithms=[
+        KBinsDiscretizer(encode=""ordinal"", n_bins=6, strategy=""quantile""),
+        DecisionTreeClassifier(
+            ccp_alpha=0.0,
+            min_impurity_decrease=0.2817529217172294,
+            min_samples_split=2,
+            min_weight_fraction_leaf=0.5,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,10,0.8516427104722792,338.42,"Pipeline(
+    algorithms=[MinMaxScaler(clip=False), MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,50,0.8516427104722792,341.15,"Pipeline(
+    algorithms=[MinMaxScaler(clip=False), MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,10,0.43737166324435317,339.41,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=False),
+        ExtraTreeClassifier(
+            ccp_alpha=0.21046636442245725,
+            min_impurity_decrease=0.992,
+            min_samples_split=2,
+            min_weight_fraction_leaf=0.5,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,50,0.8896303901437371,310.05,"Pipeline(
+    algorithms=[
+        TruncatedSVD(algorithm=""randomized"", n_components=60, n_iter=9, tol=-0.992),
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,10,0.8239219712525667,348.03,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,0,50,0.8239219712525667,347.46,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,10,0.813141683778234,345.14,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_reuters,6577,5000,58,1,50,0.813141683778234,337.54,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

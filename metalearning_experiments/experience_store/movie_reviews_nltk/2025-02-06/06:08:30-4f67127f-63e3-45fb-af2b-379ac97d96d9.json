@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "RadiusNeighborsTransformer": {
+                "mode": {
+                    "value": "distance"
+                },
+                "radius": {
+                    "value": 3.935914794365135
+                },
+                "algorithm": {
+                    "value": "kd_tree"
+                },
+                "leaf_size": {
+                    "value": 23
+                },
+                "p": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": true
+                },
+                "C": {
+                    "value": 0.005
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        3893.002,
+        1711.99769246223,
+        0.4397628597319575,
+        0.6779999999999999
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:08:30",
+    "alias": "movie_reviews_nltk",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

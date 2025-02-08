@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "OneHotEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "sparse": {
+                    "value": true
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": 5.45353704911194
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": 0.0007704294983271673
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.993
+                },
+                "n_iter_no_change": {
+                    "value": 9
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "average": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8962763155076177,
+        0.003,
+        0.289,
+        0.010380622837370243,
+        21.333,
+        21.71115176585526,
+        1.0177261409954184,
+        0.639
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 18:34:13",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Found unknown categories [0.24427748463821963, 0.2850719186423318, 0.2915971147036701, 0.307529525154104, 0.31600451625401144, 0.32074235345274354, 0.3965232154062559, 0.4816114844847372] in column 1 during transform"
+}

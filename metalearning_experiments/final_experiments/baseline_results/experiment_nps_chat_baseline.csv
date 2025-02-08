@@ -1,0 +1,163 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+nps_chat,2000,2000,15,0,10,0.5446880269814502,319.85,"Pipeline(
+    algorithms=[
+        ExtraTreeClassifier(
+            ccp_alpha=0.0,
+            min_impurity_decrease=0.0,
+            min_samples_split=2,
+            min_weight_fraction_leaf=0.0,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,0,50,0.5446880269814502,319.69,"Pipeline(
+    algorithms=[
+        ExtraTreeClassifier(
+            ccp_alpha=0.0,
+            min_impurity_decrease=0.0,
+            min_samples_split=2,
+            min_weight_fraction_leaf=0.0,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,1,10,0.6661045531197302,326.29,"Pipeline(
+    algorithms=[
+        SVC(
+            C=2.876371642657004,
+            break_ties=False,
+            cache_size=1,
+            coef0=-0.992,
+            decision_function_shape=""ovo"",
+            degree=5,
+            gamma=""scale"",
+            probability=False,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,1,50,0.6661045531197302,331.93,"Pipeline(
+    algorithms=[
+        SVC(
+            C=2.876371642657004,
+            break_ties=False,
+            cache_size=1,
+            coef0=-0.992,
+            decision_function_shape=""ovo"",
+            degree=5,
+            gamma=""scale"",
+            probability=False,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,0,10,0.5337837837837838,317.12,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,0,50,0.5337837837837838,301.07,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,1,10,0.6199324324324325,332.90,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=0.005,
+            dual=True,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,1,50,0.6199324324324325,322.94,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=0.005,
+            dual=True,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,0,10,0.46959459459459457,336.82,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=True, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,0,50,0.46959459459459457,336.73,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=True, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,1,10,0.6182432432432432,357.59,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        TfidfTransformer(norm=""l1"", smooth_idf=True, sublinear_tf=False, use_idf=True),
+        LinearSVC(
+            C=0.005,
+            dual=False,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nps_chat,2000,2000,15,1,50,0.6182432432432432,356.67,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        TfidfTransformer(norm=""l1"", smooth_idf=True, sublinear_tf=False, use_idf=True),
+        LinearSVC(
+            C=0.005,
+            dual=False,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

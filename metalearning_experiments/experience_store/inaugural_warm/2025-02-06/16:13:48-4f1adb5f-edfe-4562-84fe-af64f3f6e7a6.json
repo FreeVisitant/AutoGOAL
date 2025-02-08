@@ -1,0 +1,69 @@
+{
+    "algorithms": [
+        {
+            "LatentDirichletAllocation": {}
+        },
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "OneHotEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "sparse": {
+                    "value": true
+                },
+                "handle_unknown": {
+                    "value": "ignore"
+                }
+            }
+        },
+        {
+            "ComplementNB": {
+                "fit_prior": {
+                    "value": false
+                },
+                "norm": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:13:48",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Found unknown categories [-0.17752272214248194, -0.16739464201516624, -0.14894443963054113, -0.1451514074078089, -0.14508716273463185, -0.1433362720343498, -0.14064985181484554, 0.09832923741590989, 0.18687009614594202, 0.1974850573010195, 0.2208407037082512, 0.22914065403402922, 0.26918850258318006, 0.2759389444120607, 0.3380315647458637, 0.3620553774621645, 0.37018650479193027] in column 0 during transform"
+}

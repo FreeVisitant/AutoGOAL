@@ -1,0 +1,84 @@
+{
+    "algorithms": [
+        {
+            "KNNImputer": {
+                "n_neighbors": {
+                    "value": 3
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "metric": {
+                    "value": "nan_euclidean"
+                },
+                "add_indicator": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PCA": {
+                "whiten": {
+                    "value": false
+                },
+                "svd_solver": {
+                    "value": "arpack"
+                },
+                "tol": {
+                    "value": 0.992
+                },
+                "iterated_power": {
+                    "value": "auto"
+                }
+            }
+        },
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "ExtraTreeClassifier": {
+                "min_samples_split": {
+                    "value": 2
+                },
+                "min_weight_fraction_leaf": {
+                    "value": 0.0
+                },
+                "min_impurity_decrease": {
+                    "value": 0.5807156708981609
+                },
+                "ccp_alpha": {
+                    "value": 0.4310031995673758
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.836726716298423,
+        0.003,
+        0.292,
+        0.010273972602739727,
+        21.1935,
+        21.520247622878323,
+        1.0154173507385906,
+        0.6555
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:25:23",
+    "alias": "nps_chat",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

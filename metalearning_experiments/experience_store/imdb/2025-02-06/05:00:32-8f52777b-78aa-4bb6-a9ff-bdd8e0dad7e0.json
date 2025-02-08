@@ -1,0 +1,72 @@
+{
+    "algorithms": [
+        {
+            "SGDClassifier": {
+                "loss": {
+                    "value": "log"
+                },
+                "penalty": {
+                    "value": "elasticnet"
+                },
+                "l1_ratio": {
+                    "value": 0.2664107557299632
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": -0.0010616364436865167
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "epsilon": {
+                    "value": 0.993
+                },
+                "learning_rate": {
+                    "value": "optimal"
+                },
+                "eta0": {
+                    "value": -0.6877680968806512
+                },
+                "power_t": {
+                    "value": -4.995
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.3252251169675786
+                },
+                "n_iter_no_change": {
+                    "value": 4
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:00:32",
+    "alias": "imdb",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

@@ -1,0 +1,72 @@
+{
+    "algorithms": [
+        {
+            "SGDClassifier": {
+                "loss": {
+                    "value": "squared_error"
+                },
+                "penalty": {
+                    "value": "l1"
+                },
+                "l1_ratio": {
+                    "value": 0.001
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": 0.001
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "epsilon": {
+                    "value": -0.868862852603066
+                },
+                "learning_rate": {
+                    "value": "optimal"
+                },
+                "eta0": {
+                    "value": 0.2171100008071567
+                },
+                "power_t": {
+                    "value": 4.991
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 5
+                },
+                "average": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8962763155076177,
+        0.003,
+        0.289,
+        0.010380622837370243,
+        21.333,
+        21.71115176585526,
+        1.0177261409954184,
+        0.639
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 18:33:09",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

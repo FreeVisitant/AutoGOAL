@@ -1,0 +1,77 @@
+{
+    "algorithms": [
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "TfidfTransformer": {
+                "norm": {
+                    "value": "l1"
+                },
+                "use_idf": {
+                    "value": true
+                },
+                "smooth_idf": {
+                    "value": false
+                },
+                "sublinear_tf": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": -9.995
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": 0.001
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.993
+                },
+                "n_iter_no_change": {
+                    "value": 9
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:47:32",
+    "alias": "imdb",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "((17500, 3000), dtype('float64'))"
+}

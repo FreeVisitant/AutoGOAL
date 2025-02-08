@@ -1,0 +1,83 @@
+{
+    "algorithms": [
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 9
+                },
+                "degree": {
+                    "value": 5
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "periodic"
+                },
+                "include_bias": {
+                    "value": false
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "FactorAnalysis": {
+                "tol": {
+                    "value": 0.002565085489672654
+                },
+                "svd_method": {
+                    "value": "lapack"
+                },
+                "iterated_power": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": true
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "multi_class": {
+                    "value": "crammer_singer"
+                },
+                "fit_intercept": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8962763155076177,
+        0.003,
+        0.289,
+        0.010380622837370243,
+        21.333,
+        21.71115176585526,
+        1.0177261409954184,
+        0.639
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 18:22:58",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Input contains NaN, infinity or a value too large for dtype('float64')."
+}

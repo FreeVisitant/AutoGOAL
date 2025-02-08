@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "RadiusNeighborsTransformer": {
+                "mode": {
+                    "value": "distance"
+                },
+                "radius": {
+                    "value": 3.935914794365135
+                },
+                "algorithm": {
+                    "value": "kd_tree"
+                },
+                "leaf_size": {
+                    "value": 23
+                },
+                "p": {
+                    "value": 3
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": true
+                },
+                "C": {
+                    "value": 0.005
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        7944.0,
+        2.0,
+        0.9510309701661749,
+        0.3704682779456193,
+        0.6295317220543807,
+        0.5884823035392921,
+        6.03285498489426,
+        1.5669204780747794,
+        0.25973116907305266,
+        0.6075036499358785
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:56:27",
+    "alias": "nltk_names",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

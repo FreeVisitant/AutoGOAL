@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "RobustScaler": {
+                "with_centering": {
+                    "value": false
+                },
+                "with_scaling": {
+                    "value": true
+                },
+                "unit_variance": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": 9.194416804378605
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.0037146442092813063
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.6779517384647253
+                },
+                "n_iter_no_change": {
+                    "value": 1
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "average": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        6577.0,
+        58.0,
+        3.050365200866029,
+        0.0001520450053215752,
+        0.43180781511327354,
+        0.00035211267605633805,
+        755.1208757792307,
+        809.7191535546324,
+        1.072304023801567,
+        0.7146105839795671
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:10:10",
+    "alias": "nltk_reuters",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

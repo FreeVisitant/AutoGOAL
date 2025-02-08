@@ -1,0 +1,77 @@
+{
+    "algorithms": [
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "deflation"
+                },
+                "whiten": {
+                    "value": false
+                },
+                "fun": {
+                    "value": "logcosh"
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": -9.995
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": 0.001
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 6
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        3893.002,
+        1711.99769246223,
+        0.4397628597319575,
+        0.6779999999999999
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:20:11",
+    "alias": "movie_reviews_nltk",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "shapes (1400,) and (2000,1400) not aligned: 1400 (dim 0) != 2000 (dim 0)"
+}

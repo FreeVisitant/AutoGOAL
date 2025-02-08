@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "RadiusNeighborsTransformer": {
+                "mode": {
+                    "value": "connectivity"
+                },
+                "radius": {
+                    "value": 7.087210416844069
+                },
+                "algorithm": {
+                    "value": "auto"
+                },
+                "leaf_size": {
+                    "value": 59
+                },
+                "p": {
+                    "value": 2
+                }
+            }
+        },
+        {
+            "KNeighborsClassifier": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "algorithm": {
+                    "value": "kd_tree"
+                },
+                "leaf_size": {
+                    "value": 54
+                },
+                "p": {
+                    "value": 1
+                },
+                "metric": {
+                    "value": "l2"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:33:02",
+    "alias": "imdb_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "((7669, 17500), dtype('float64'))"
+}

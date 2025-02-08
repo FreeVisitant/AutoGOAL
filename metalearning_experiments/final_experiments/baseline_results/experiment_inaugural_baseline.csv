@@ -1,0 +1,202 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+inaugural,59,3000,2,0,10,0.9411764705882353,307.15,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=True, sublinear_tf=True, use_idf=True),
+        RidgeClassifier(fit_intercept=False, positive=False, solver=""sparse_cg""),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,50,0.9411764705882353,307.17,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=True, sublinear_tf=True, use_idf=True),
+        RidgeClassifier(fit_intercept=False, positive=False, solver=""sparse_cg""),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,10,0.9411764705882353,320.75,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,50,0.9411764705882353,320.02,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,10,0.9411764705882353,323.82,"Pipeline(
+    algorithms=[
+        PassiveAggressiveClassifier(
+            C=7.791553141730676,
+            average=False,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=2,
+            shuffle=False,
+            tol=0.001,
+            validation_fraction=0.9536610820535216,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,50,0.9411764705882353,347.63,"Pipeline(
+    algorithms=[
+        PassiveAggressiveClassifier(
+            C=7.791553141730676,
+            average=False,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=2,
+            shuffle=False,
+            tol=0.001,
+            validation_fraction=0.9536610820535216,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,10,1.0,341.85,"Pipeline(
+    algorithms=[StandardScaler(with_mean=False, with_std=False), GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,50,1.0,308.01,"Pipeline(
+    algorithms=[StandardScaler(with_mean=False, with_std=False), GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,10,1.0,324.09,"Pipeline(
+    algorithms=[
+        NuSVC(
+            break_ties=True,
+            cache_size=236,
+            coef0=-0.43892134888379447,
+            decision_function_shape=""ovr"",
+            degree=1,
+            gamma=""scale"",
+            kernel=""linear"",
+            probability=True,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,50,1.0,358.74,"Pipeline(
+    algorithms=[
+        NuSVC(
+            break_ties=True,
+            cache_size=236,
+            coef0=-0.43892134888379447,
+            decision_function_shape=""ovr"",
+            degree=1,
+            gamma=""scale"",
+            kernel=""linear"",
+            probability=True,
+            shrinking=False,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,10,1.0,308.45,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,50,1.0,303.22,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,10,1.0,344.90,"Pipeline(
+    algorithms=[
+        TfidfTransformer(norm=""l2"", smooth_idf=True, sublinear_tf=True, use_idf=False),
+        KNeighborsClassifier(
+            algorithm=""auto"",
+            leaf_size=59,
+            metric=""nan_euclidean"",
+            n_neighbors=4,
+            p=3,
+            weights=""distance"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,0,50,1.0,354.53,"Pipeline(
+    algorithms=[
+        KNeighborsClassifier(
+            algorithm=""auto"",
+            leaf_size=37,
+            metric=""l2"",
+            n_neighbors=7,
+            p=1,
+            weights=""distance"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,10,1.0,328.62,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=3.527981719814843,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+inaugural,59,3000,2,1,50,1.0,321.68,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=3.527981719814843,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

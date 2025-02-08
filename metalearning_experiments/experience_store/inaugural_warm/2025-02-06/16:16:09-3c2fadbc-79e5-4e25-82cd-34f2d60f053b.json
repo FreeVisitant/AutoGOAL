@@ -1,0 +1,137 @@
+{
+    "algorithms": [
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 2
+                },
+                "degree": {
+                    "value": 1
+                },
+                "knots": {
+                    "value": "uniform"
+                },
+                "extrapolation": {
+                    "value": "error"
+                },
+                "include_bias": {
+                    "value": true
+                },
+                "order": {
+                    "value": "c"
+                }
+            }
+        },
+        {
+            "RobustScaler": {
+                "with_centering": {
+                    "value": false
+                },
+                "with_scaling": {
+                    "value": false
+                },
+                "unit_variance": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 6
+                },
+                "degree": {
+                    "value": 3
+                },
+                "knots": {
+                    "value": "uniform"
+                },
+                "extrapolation": {
+                    "value": "linear"
+                },
+                "include_bias": {
+                    "value": true
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 2
+                },
+                "degree": {
+                    "value": 5
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "error"
+                },
+                "include_bias": {
+                    "value": true
+                },
+                "order": {
+                    "value": "c"
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": true
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:16:09",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "X contains values beyond the limits of the knots."
+}

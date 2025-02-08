@@ -1,0 +1,97 @@
+{
+    "algorithms": [
+        {
+            "LatentDirichletAllocation": {}
+        },
+        {
+            "RobustScaler": {
+                "with_centering": {
+                    "value": true
+                },
+                "with_scaling": {
+                    "value": false
+                },
+                "unit_variance": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "PCA": {
+                "whiten": {
+                    "value": true
+                },
+                "svd_solver": {
+                    "value": "randomized"
+                },
+                "tol": {
+                    "value": 0.992
+                },
+                "iterated_power": {
+                    "value": "randomized"
+                }
+            }
+        },
+        {
+            "StandardScaler": {
+                "with_mean": {
+                    "value": false
+                },
+                "with_std": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "FactorAnalysis": {
+                "tol": {
+                    "value": 0.094
+                },
+                "svd_method": {
+                    "value": "randomized"
+                },
+                "iterated_power": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "ExtraTreeClassifier": {
+                "min_samples_split": {
+                    "value": 3
+                },
+                "min_weight_fraction_leaf": {
+                    "value": 0.4215313514715918
+                },
+                "min_impurity_decrease": {
+                    "value": 0.361564697669585
+                },
+                "ccp_alpha": {
+                    "value": 0.830096055939731
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        3893.002,
+        1711.99769246223,
+        0.4397628597319575,
+        0.6779999999999999
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:14:04",
+    "alias": "movie_reviews_nltk",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": -Infinity,
+    "evaluation_time": 0.0,
+    "error": null
+}

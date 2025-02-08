@@ -1,0 +1,46 @@
+{
+    "algorithms": [
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "NearestCentroid": {}
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:21:14",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Found unknown categories [-0.2700367405747802, -0.26556577759097455, -0.2550704475204261, -0.2491795568706865, -0.21428499529631626, -0.19955006363169267, -0.11621783666773201, -0.09675586551741948, 0.05439176769513964, 0.07168351104370557, 0.12017912504812676, 0.21276258493677658, 0.24233292546742782, 0.26744118403052863, 0.28180974043843426, 0.29555156115603304, 0.29705773330006136] in column 0 during transform"
+}

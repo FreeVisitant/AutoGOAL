@@ -1,0 +1,15 @@
+warm_alias,n_samples,n_features,n_classes,seed,search_iters,best_score,time_seconds,best_pipeline
+20newsgroups_warm,1775,2000,3,0,10,-inf,1050.76,"Pipeline(
+    algorithms=[CategoricalNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+20newsgroups_warm,1775,2000,3,0,10,-inf,1232.61,"Pipeline(
+    algorithms=[BernoulliNB(alpha=0.0, binarize=-0.992, fit_prior=True)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

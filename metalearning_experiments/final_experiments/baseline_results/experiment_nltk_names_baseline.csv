@@ -1,0 +1,228 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+nltk_names,7944,1000,2,0,10,0.8182199832073888,332.09,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,50,0.8182199832073888,355.34,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=True,
+            loss=""squared_hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,10,0.8203190596137699,337.39,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=8.419563312855143, fit_intercept=True, multi_class=""auto"", penalty=""l2""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,50,0.8203190596137699,330.83,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=8.419563312855143, fit_intercept=True, multi_class=""auto"", penalty=""l2""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,10,0.7850545759865659,315.75,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,50,0.7850545759865659,360.89,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,10,0.8026868178001679,339.39,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=1.7659801030573048, fit_intercept=False, multi_class=""ovr"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,50,0.8026868178001679,327.13,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=1.7659801030573048, fit_intercept=False, multi_class=""ovr"", penalty=""none""
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,10,0.8308144416456759,332.24,"Pipeline(
+    algorithms=[
+        KBinsDiscretizer(encode=""onehot"", n_bins=4, strategy=""uniform""),
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,50,0.8308144416456759,336.16,"Pipeline(
+    algorithms=[
+        KBinsDiscretizer(encode=""onehot"", n_bins=4, strategy=""uniform""),
+        LinearSVC(
+            C=9.991,
+            dual=False,
+            fit_intercept=False,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,10,0.8228379513014273,344.89,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=6.792146893460001,
+            fit_intercept=False,
+            multi_class=""multinomial"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,50,0.8228379513014273,351.52,"Pipeline(
+    algorithms=[
+        LogisticRegression(
+            C=6.792146893460001,
+            fit_intercept=False,
+            multi_class=""multinomial"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,10,0.7942905121746432,236.29,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,10,0.8161209068010076,303.46,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,0,50,0.8161209068010076,345.96,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=9.991,
+            dual=True,
+            fit_intercept=False,
+            loss=""squared_hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,10,0.8337531486146096,308.86,"Pipeline(
+    algorithms=[
+        PassiveAggressiveClassifier(
+            C=0.8922923870461955,
+            average=True,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=2,
+            shuffle=True,
+            tol=-0.005,
+            validation_fraction=0.993,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+nltk_names,7944,1000,2,1,50,0.8337531486146096,324.54,"Pipeline(
+    algorithms=[
+        PassiveAggressiveClassifier(
+            C=0.8922923870461955,
+            average=True,
+            early_stopping=False,
+            fit_intercept=True,
+            n_iter_no_change=2,
+            shuffle=True,
+            tol=-0.005,
+            validation_fraction=0.993,
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

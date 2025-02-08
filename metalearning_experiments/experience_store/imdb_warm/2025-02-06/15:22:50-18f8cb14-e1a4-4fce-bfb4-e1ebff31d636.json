@@ -1,0 +1,130 @@
+{
+    "algorithms": [
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "FeatureAgglomeration": {
+                "n_clusters": {
+                    "value": 1
+                },
+                "affinity": {
+                    "value": "euclidean"
+                },
+                "compute_full_tree": {
+                    "value": "auto"
+                },
+                "compute_distances": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 5
+                },
+                "degree": {
+                    "value": 1
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "linear"
+                },
+                "include_bias": {
+                    "value": false
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "PCA": {
+                "whiten": {
+                    "value": true
+                },
+                "svd_solver": {
+                    "value": "randomized"
+                },
+                "tol": {
+                    "value": -0.992
+                },
+                "iterated_power": {
+                    "value": "randomized"
+                }
+            }
+        },
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "FactorAnalysis": {
+                "tol": {
+                    "value": 0.094
+                },
+                "svd_method": {
+                    "value": "lapack"
+                },
+                "iterated_power": {
+                    "value": 5
+                }
+            }
+        },
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "ExtraTreeClassifier": {
+                "min_samples_split": {
+                    "value": 3
+                },
+                "min_weight_fraction_leaf": {
+                    "value": 0.13368791359861437
+                },
+                "min_impurity_decrease": {
+                    "value": 0.992
+                },
+                "ccp_alpha": {
+                    "value": 0.992
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:22:50",
+    "alias": "imdb_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "((17500, 3000), dtype('float64'))"
+}

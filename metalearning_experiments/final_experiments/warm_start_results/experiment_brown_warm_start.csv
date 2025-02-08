@@ -1,0 +1,72 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+brown_warm,500,3000,15,0,10,0.5347222222222222,356.24,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=5.326758321453849,
+            dual=True,
+            fit_intercept=True,
+            loss=""hinge"",
+            multi_class=""crammer_singer"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+brown_warm,500,3000,15,0,50,0.5208333333333334,310.38,"Pipeline(
+    algorithms=[
+        LinearSVC(
+            C=5.269918244286345,
+            dual=True,
+            fit_intercept=True,
+            loss=""hinge"",
+            multi_class=""ovr"",
+            penalty=""l2"",
+        )
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+brown_warm,500,3000,15,1,10,0.5138888888888888,370.07,"Pipeline(
+    algorithms=[
+        MinMaxScaler(clip=True),
+        TfidfTransformer(norm=""l1"", smooth_idf=False, sublinear_tf=True, use_idf=True),
+        SVC(
+            C=8.80102660006296,
+            break_ties=False,
+            cache_size=1,
+            coef0=-0.992,
+            decision_function_shape=""ovo"",
+            degree=5,
+            gamma=""scale"",
+            probability=True,
+            shrinking=False,
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+brown_warm,500,3000,15,1,50,0.5138888888888888,371.66,"Pipeline(
+    algorithms=[
+        RadiusNeighborsTransformer(
+            algorithm=""auto"",
+            leaf_size=39,
+            mode=""connectivity"",
+            p=3,
+            radius=-4.679870376734424,
+        ),
+        LogisticRegression(
+            C=9.991, fit_intercept=False, multi_class=""multinomial"", penalty=""l2""
+        ),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

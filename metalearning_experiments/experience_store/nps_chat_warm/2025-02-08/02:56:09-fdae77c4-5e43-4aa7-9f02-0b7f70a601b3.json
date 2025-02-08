@@ -1,0 +1,57 @@
+{
+    "algorithms": [
+        {
+            "LatentDirichletAllocation": {}
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": -9.910395659635508
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.0033962795698377875
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 1
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.8585254249094456,
+        0.0025,
+        0.2965,
+        0.008431703204047219,
+        22.3395,
+        24.660033247138983,
+        1.103875791630922,
+        0.654
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-08 02:56:09",
+    "alias": "nps_chat_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "The test_size = 9 should be greater or equal to the number of classes = 15"
+}

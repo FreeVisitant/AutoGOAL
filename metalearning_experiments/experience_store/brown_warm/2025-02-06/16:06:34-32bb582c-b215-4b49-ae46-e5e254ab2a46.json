@@ -1,0 +1,72 @@
+{
+    "algorithms": [
+        {
+            "SGDClassifier": {
+                "loss": {
+                    "value": "epsilon_insensitive"
+                },
+                "penalty": {
+                    "value": "l2"
+                },
+                "l1_ratio": {
+                    "value": 0.999
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "tol": {
+                    "value": 0.001
+                },
+                "shuffle": {
+                    "value": false
+                },
+                "epsilon": {
+                    "value": -0.992
+                },
+                "learning_rate": {
+                    "value": "optimal"
+                },
+                "eta0": {
+                    "value": 0.5429086725480612
+                },
+                "power_t": {
+                    "value": -3.852178899140819
+                },
+                "early_stopping": {
+                    "value": true
+                },
+                "validation_fraction": {
+                    "value": 0.006
+                },
+                "n_iter_no_change": {
+                    "value": 1
+                },
+                "average": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:06:34",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "The test_size = 3 should be greater or equal to the number of classes = 15"
+}

@@ -1,0 +1,83 @@
+{
+    "algorithms": [
+        {
+            "PolynomialFeatures": {
+                "degree": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "RadiusNeighborsTransformer": {
+                "mode": {
+                    "value": "distance"
+                },
+                "radius": {
+                    "value": 9.991
+                },
+                "algorithm": {
+                    "value": "auto"
+                },
+                "leaf_size": {
+                    "value": 1
+                },
+                "p": {
+                    "value": 2
+                }
+            }
+        },
+        {
+            "NuSVC": {
+                "kernel": {
+                    "value": "sigmoid"
+                },
+                "degree": {
+                    "value": 5
+                },
+                "gamma": {
+                    "value": "scale"
+                },
+                "coef0": {
+                    "value": -0.992
+                },
+                "shrinking": {
+                    "value": true
+                },
+                "probability": {
+                    "value": false
+                },
+                "cache_size": {
+                    "value": 231
+                },
+                "decision_function_shape": {
+                    "value": "ovo"
+                },
+                "break_ties": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        7944.0,
+        2.0,
+        0.9510309701661749,
+        0.3704682779456193,
+        0.6295317220543807,
+        0.5884823035392921,
+        6.03285498489426,
+        1.5669204780747794,
+        0.25973116907305266,
+        0.6017120220406985
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 17:18:34",
+    "alias": "nltk_names_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

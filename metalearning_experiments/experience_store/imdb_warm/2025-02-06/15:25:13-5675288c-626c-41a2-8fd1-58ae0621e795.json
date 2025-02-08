@@ -1,0 +1,77 @@
+{
+    "algorithms": [
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 5
+                },
+                "degree": {
+                    "value": 5
+                },
+                "knots": {
+                    "value": "uniform"
+                },
+                "extrapolation": {
+                    "value": "continue"
+                },
+                "include_bias": {
+                    "value": false
+                },
+                "order": {
+                    "value": "c"
+                }
+            }
+        },
+        {
+            "KNeighborsTransformer": {
+                "mode": {
+                    "value": "connectivity"
+                },
+                "n_neighbors": {
+                    "value": 1
+                },
+                "algorithm": {
+                    "value": "kd_tree"
+                },
+                "leaf_size": {
+                    "value": 18
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "ComplementNB": {
+                "fit_prior": {
+                    "value": false
+                },
+                "norm": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        25000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        1325.06964,
+        1003.1136072002365,
+        0.7570270851577556,
+        0.75808
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 15:25:13",
+    "alias": "imdb_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "((17500, 27000), dtype('float64'))"
+}

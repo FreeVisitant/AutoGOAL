@@ -1,0 +1,117 @@
+{
+    "algorithms": [
+        {
+            "SplineTransformer": {
+                "n_knots": {
+                    "value": 2
+                },
+                "degree": {
+                    "value": 1
+                },
+                "knots": {
+                    "value": "quantile"
+                },
+                "extrapolation": {
+                    "value": "continue"
+                },
+                "include_bias": {
+                    "value": false
+                },
+                "order": {
+                    "value": "f"
+                }
+            }
+        },
+        {
+            "FastICA": {
+                "algorithm": {
+                    "value": "parallel"
+                },
+                "whiten": {
+                    "value": false
+                },
+                "fun": {
+                    "value": "cube"
+                }
+            }
+        },
+        {
+            "MinMaxScaler": {
+                "clip": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "OrdinalEncoder": {
+                "categories": {
+                    "value": "auto"
+                },
+                "handle_unknown": {
+                    "value": "error"
+                }
+            }
+        },
+        {
+            "IncrementalPCA": {
+                "whiten": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "KNNImputer": {
+                "n_neighbors": {
+                    "value": 6
+                },
+                "weights": {
+                    "value": "uniform"
+                },
+                "metric": {
+                    "value": "nan_euclidean"
+                },
+                "add_indicator": {
+                    "value": false
+                }
+            }
+        },
+        {
+            "LogisticRegression": {
+                "penalty": {
+                    "value": "none"
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "fit_intercept": {
+                    "value": true
+                },
+                "multi_class": {
+                    "value": "auto"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.27
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:10:10",
+    "alias": "brown_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "shapes (356,356) and (3000,356) not aligned: 356 (dim 1) != 3000 (dim 0)"
+}

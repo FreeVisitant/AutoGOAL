@@ -1,0 +1,52 @@
+{
+    "algorithms": [
+        {
+            "TruncatedSVD": {
+                "n_components": {
+                    "value": 24
+                },
+                "algorithm": {
+                    "value": "randomized"
+                },
+                "n_iter": {
+                    "value": 6
+                },
+                "tol": {
+                    "value": 0.992
+                }
+            }
+        },
+        {
+            "ComplementNB": {
+                "fit_prior": {
+                    "value": true
+                },
+                "norm": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        500.0,
+        15.0,
+        3.6485620738487343,
+        0.012,
+        0.16,
+        0.075,
+        19928.568,
+        812.5258527431604,
+        0.0407719136037853,
+        0.32599999999999996
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 04:49:44",
+    "alias": "brown",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Negative values in data passed to ComplementNB (input X)"
+}

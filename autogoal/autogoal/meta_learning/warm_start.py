@@ -40,19 +40,19 @@ class WarmStart:
 
     Parameters:
         threshold (float, optional): Minimum accuracy threshold for considering an experience.
-            Experiences with accuracy below this threshold will be ignored. Default is `0.2`.
+            Experiences with accuracy below this threshold will be ignored. Default is 0.2.
         k (int, optional): The maximum number of past experiences to consider.
-            Default is `20`.
+            Default is 20.
         max_alpha (float, optional): The maximum learning rate (alpha) used when adjusting
-            the model. Default is `0.5`.
+            the model. Default is 0.5.
         normalizers (Optional[List[Normalizer]], optional): A list of normalizer instances
             to apply to the features before computing distances. Default is an empty list.
         distance (DistanceMetric, optional): The distance metric class to use when computing
-            distances between feature vectors. Default is `EuclideanDistance`.
+            distances between feature vectors. Default is EuclideanDistance.
         dataset_feature_extractor (Optional[FeatureExtractor], optional): The feature extractor
-            class to use for extracting dataset features. Default is `TextClassificationFeatureExtractor`.
+            class to use for extracting dataset features. Default is TextClassificationFeatureExtractor.
         system_feature_extractor (Optional[FeatureExtractor], optional): The feature extractor
-            class to use for extracting system features. Default is `SystemFeatureExtractor`.
+            class to use for extracting system features. Default is SystemFeatureExtractor.
 
     Attributes:
         _model (Dict): The internal probabilistic model that will be adjusted.
@@ -203,9 +203,10 @@ class WarmStart:
         experiences = ExperienceStore.load_all_experiences(
             self.from_date, self.to_date, include=self.include, exclude=self.exclude
         )
-
+        print("[DEBUG] experiences loaded:", [ (exp.alias, exp.f1, exp.dataset_feature_extractor_name) for exp in experiences ])
         # Step 2.1: Filter experiences based on feature extractors
         experiences = self.filter_experiences_by_feature_extractors(experiences)
+        print("[DEBUG] experiences after filter:", [ (exp.alias, exp.f1, exp.dataset_feature_extractor_name) for exp in experiences ])
 
         if not experiences:
             # No relevant experiences found
@@ -244,24 +245,20 @@ class WarmStart:
 
         print("Model adjusted to:")
         # pprint.pprint(self._model)
-
-        print("Learned experience for Finetuning Methods:")
-        print(
-            f'"FineTuneGenLLMClassifier": {self._model["FineTuneGenLLMClassifier"].value},'
-        )
-        print(f'"LoraGenLLMClassifier": {self._model["LoraGenLLMClassifier"].value},')
-        print(
-            f'"PartialFineTuneGenLLMClassifier": {self._model["PartialFineTuneGenLLMClassifier"].value},'
-        )
-        print(
-            f'"FineTuneLLMEmbeddingClassifier": {self._model["FineTuneLLMEmbeddingClassifier"].value},'
-        )
-        print(
-            f'"LoraLLMEmbeddingClassifier": {self._model["LoraLLMEmbeddingClassifier"].value},'
-        )
-        print(
-            f'"PartialFineTuneLLMEmbeddingClassifier": {self._model["PartialFineTuneLLMEmbeddingClassifier"].value}'
-        )
+        expected_keys = [
+            "FineTuneGenLLMClassifier",
+            "LoraGenLLMClassifier",
+            "PartialFineTuneGenLLMClassifier",
+            "FineTuneLLMEmbeddingClassifier",
+            "LoraLLMEmbeddingClassifier",
+            "PartialFineTuneLLMEmbeddingClassifier"
+        ]
+        for key in expected_keys:
+            if key in self._model:
+                print(f'"{key}": {self._model[key].value},')
+            else:
+                print(f'"{key}" no está presente en el modelo.')
+      
 
         if self.exit_after_warmup:
             raise ValueError("Exiting after warm-up.")
@@ -311,12 +308,10 @@ class WarmStart:
         return extractor.extract_features(X_train, y_train)
 
     def _extract_system_features(self):
-        """
-        Extracts system features using the specified system feature extractor.
-
-        Returns:
-            np.ndarray: Extracted system features.
-        """
+        import numpy as np
+        if self.system_feature_extractor_class is None:
+            # No system features
+            return np.array([])
         extractor = self.system_feature_extractor_class()
         return extractor.extract_features()
 
@@ -450,6 +445,11 @@ class WarmStart:
         selected_negative_experiences = [exp for exp, dist in selected_negative]
         negative_distances = [dist for exp, dist in selected_negative]
 
+        print("[DEBUG] Experiencias positivas seleccionadas:")
+        for exp, dist in positive_experiences:
+        # Muestra alias, F1, distancia, etc.
+            print(f" - Alias={exp.alias}, F1={exp.f1:.4f}, Dist={dist:.4f}")
+
         return (
             selected_positive_experiences,
             positive_distances,
@@ -470,7 +470,10 @@ class WarmStart:
             List[Experience]: A list of experiences that used the same feature extractors.
         """
         dataset_extractor_name = self.dataset_feature_extractor_class.__name__
-        system_extractor_name = self.system_feature_extractor_class.__name__
+        if self.system_feature_extractor_class is None:
+            system_extractor_name = "NoSystem"
+        else:
+            system_extractor_name = self.system_feature_extractor_class.__name__
 
         filtered_experiences = [
             exp

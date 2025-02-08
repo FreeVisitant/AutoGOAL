@@ -1,0 +1,70 @@
+{
+    "algorithms": [
+        {
+            "TfidfTransformer": {
+                "norm": {
+                    "value": "l2"
+                },
+                "use_idf": {
+                    "value": true
+                },
+                "smooth_idf": {
+                    "value": true
+                },
+                "sublinear_tf": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "PassiveAggressiveClassifier": {
+                "C": {
+                    "value": 9.884536587116816
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "tol": {
+                    "value": -0.005
+                },
+                "early_stopping": {
+                    "value": false
+                },
+                "validation_fraction": {
+                    "value": 0.993
+                },
+                "n_iter_no_change": {
+                    "value": 5
+                },
+                "shuffle": {
+                    "value": true
+                },
+                "average": {
+                    "value": true
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        59.0,
+        2.0,
+        0.9981341772155725,
+        0.4745762711864407,
+        0.5254237288135594,
+        0.9032258064516129,
+        13682.64406779661,
+        8137.616824671501,
+        0.5947400797937986,
+        0.8666666666666668
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 16:13:46",
+    "alias": "inaugural_warm",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": 0.9411764705882353,
+    "evaluation_time": 0.0,
+    "error": null
+}

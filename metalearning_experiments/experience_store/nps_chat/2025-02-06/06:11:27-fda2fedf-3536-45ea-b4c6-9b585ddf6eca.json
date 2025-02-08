@@ -1,0 +1,64 @@
+{
+    "algorithms": [
+        {
+            "TfidfTransformer": {
+                "norm": {
+                    "value": "l2"
+                },
+                "use_idf": {
+                    "value": false
+                },
+                "smooth_idf": {
+                    "value": false
+                },
+                "sublinear_tf": {
+                    "value": true
+                }
+            }
+        },
+        {
+            "LinearSVC": {
+                "penalty": {
+                    "value": "l2"
+                },
+                "loss": {
+                    "value": "hinge"
+                },
+                "dual": {
+                    "value": false
+                },
+                "C": {
+                    "value": 7.3441996644980705
+                },
+                "multi_class": {
+                    "value": "ovr"
+                },
+                "fit_intercept": {
+                    "value": false
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        15.0,
+        2.836726716298423,
+        0.003,
+        0.292,
+        0.010273972602739727,
+        21.1935,
+        21.520247622878323,
+        1.0154173507385906,
+        0.6555
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:11:27",
+    "alias": "nps_chat",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False"
+}

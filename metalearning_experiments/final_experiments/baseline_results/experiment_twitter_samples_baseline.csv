@@ -1,0 +1,91 @@
+domain,n_samples,n_features,n_classes,random_state,search_iters,best_score,time_seconds,best_pipeline
+twitter_samples,10000,2000,2,0,10,0.755,356.34,"Pipeline(
+    algorithms=[
+        OneHotEncoder(categories=""auto"", handle_unknown=""ignore"", sparse=True),
+        ComplementNB(fit_prior=True, norm=False),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,0,50,0.755,348.14,"Pipeline(
+    algorithms=[
+        OneHotEncoder(categories=""auto"", handle_unknown=""ignore"", sparse=True),
+        ComplementNB(fit_prior=True, norm=False),
+    ],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,1,10,0.745,347.26,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=True, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,1,50,0.745,334.22,"Pipeline(
+    algorithms=[ComplementNB(fit_prior=True, norm=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,0,10,0.7083333333333334,302.87,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,0,50,0.7083333333333334,314.78,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,1,10,0.6613333333333333,307.69,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,1,50,0.6613333333333333,302.20,"Pipeline(
+    algorithms=[GaussianNB()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,0,10,0.7396666666666667,309.98,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,0,50,0.7396666666666667,301.00,"Pipeline(
+    algorithms=[MultinomialNB(fit_prior=False)],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,1,10,0.7196666666666667,321.50,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"
+twitter_samples,10000,2000,2,1,50,0.7196666666666667,317.28,"Pipeline(
+    algorithms=[NearestCentroid()],
+    input_types=(
+        Tensor[2, Continuous, Dense],
+        Supervised[Tensor[1, Categorical, Dense]],
+    ),
+)"

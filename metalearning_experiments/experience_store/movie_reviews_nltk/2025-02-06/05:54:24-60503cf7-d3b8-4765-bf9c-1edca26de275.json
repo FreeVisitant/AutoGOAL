@@ -1,0 +1,67 @@
+{
+    "algorithms": [
+        {
+            "Isomap": {
+                "n_neighbors": {
+                    "value": 1
+                },
+                "n_components": {
+                    "value": 1
+                },
+                "eigen_solver": {
+                    "value": "dense"
+                },
+                "tol": {
+                    "value": 91
+                },
+                "path_method": {
+                    "value": "auto"
+                },
+                "neighbors_algorithm": {
+                    "value": "brute"
+                },
+                "p": {
+                    "value": 1
+                }
+            }
+        },
+        {
+            "LogisticRegression": {
+                "penalty": {
+                    "value": "none"
+                },
+                "C": {
+                    "value": 9.991
+                },
+                "fit_intercept": {
+                    "value": false
+                },
+                "multi_class": {
+                    "value": "ovr"
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        2000.0,
+        2.0,
+        0.9999999997114609,
+        0.5,
+        0.5,
+        1.0,
+        3893.002,
+        1711.99769246223,
+        0.4397628597319575,
+        0.6705000000000001
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 05:54:24",
+    "alias": "movie_reviews_nltk",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

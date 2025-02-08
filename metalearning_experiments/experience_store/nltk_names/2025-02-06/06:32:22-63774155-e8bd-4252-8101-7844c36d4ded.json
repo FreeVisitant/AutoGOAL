@@ -1,0 +1,45 @@
+{
+    "algorithms": [
+        {
+            "PCA": {
+                "whiten": {
+                    "value": false
+                },
+                "svd_solver": {
+                    "value": "auto"
+                },
+                "tol": {
+                    "value": 0.9357506085680504
+                },
+                "iterated_power": {
+                    "value": "randomized"
+                }
+            }
+        },
+        {
+            "NearestCentroid": {}
+        }
+    ],
+    "dataset_features": [
+        7944.0,
+        2.0,
+        0.9510309701661749,
+        0.3704682779456193,
+        0.6295317220543807,
+        0.5884823035392921,
+        6.03285498489426,
+        1.5669204780747794,
+        0.25973116907305266,
+        0.6049845997276616
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:32:22",
+    "alias": "nltk_names",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}

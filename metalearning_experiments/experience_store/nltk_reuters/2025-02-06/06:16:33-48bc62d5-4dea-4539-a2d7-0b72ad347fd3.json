@@ -1,0 +1,58 @@
+{
+    "algorithms": [
+        {
+            "PCA": {
+                "whiten": {
+                    "value": false
+                },
+                "svd_solver": {
+                    "value": "arpack"
+                },
+                "tol": {
+                    "value": 0.5834712404997359
+                },
+                "iterated_power": {
+                    "value": "randomized"
+                }
+            }
+        },
+        {
+            "ExtraTreeClassifier": {
+                "min_samples_split": {
+                    "value": 2
+                },
+                "min_weight_fraction_leaf": {
+                    "value": 0.5
+                },
+                "min_impurity_decrease": {
+                    "value": 0.37808470558834484
+                },
+                "ccp_alpha": {
+                    "value": 0.41888723180947884
+                }
+            }
+        }
+    ],
+    "dataset_features": [
+        6577.0,
+        58.0,
+        3.050365200866029,
+        0.0001520450053215752,
+        0.43180781511327354,
+        0.00035211267605633805,
+        755.1208757792307,
+        809.7191535546324,
+        1.072304023801567,
+        0.7146105839795671
+    ],
+    "system_features": [],
+    "dataset_feature_extractor_name": "TextClassificationFeatureExtractor",
+    "system_feature_extractor_name": "NoSystem",
+    "timestamp": "2025-02-06 06:16:33",
+    "alias": "nltk_reuters",
+    "accuracy": null,
+    "cross_val_steps": null,
+    "f1": null,
+    "evaluation_time": null,
+    "error": "Exceeded allowed time for execution. The process was terminated after 60 seconds."
+}
